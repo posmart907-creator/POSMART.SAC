@@ -23,7 +23,9 @@ Sitio estático (sin backend) listo para publicar en GitHub Pages. Incluye:
 
 Como el sitio es estático (no tiene servidor propio), el panel de admin **no guarda los cambios automáticamente para todo el mundo**. Funciona así:
 
-1. Entra a tu tienda publicada y haz clic en **Admin** (contraseña por defecto: `ferreteria2026`, cámbiala en el código antes de publicar — búscala en `index.html`, línea con `ADMIN_PASSWORD`).
+1. La tienda **no muestra ningún botón de "Admin"** — tus clientes nunca lo ven. Para entrar tú, agrega `#admin` al final del link de tu tienda y presiona Enter, por ejemplo:
+   `https://tuusuario.github.io/tu-repo/#admin`
+   Guarda ese link en tus favoritos para no tener que escribirlo cada vez. Te va a pedir la contraseña (por defecto: `ferreteria2026`, cámbiala en el código antes de publicar — búscala en `index.html`, línea con `ADMIN_PASSWORD`).
 2. Sube o edita tus productos, categorías y promociones. Verás la vista previa en vivo en ese navegador.
 3. Cuando termines, haz clic en **"Descargar products.json"**.
 4. Ve a tu repositorio en GitHub, abre el archivo `products.json`, presiona el ícono de lápiz (editar) o usa **Add file → Upload files** para reemplazarlo con el que acabas de descargar.

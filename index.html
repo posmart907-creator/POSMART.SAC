@@ -47,8 +47,6 @@
   .cart-btn{background:var(--orange);position:relative;}
   .cart-btn:hover{background:var(--orange-dark);}
   .cart-count{background:var(--charcoal);color:#fff;border-radius:50%;min-width:20px;height:20px;font-size:11px;display:flex;align-items:center;justify-content:center;padding:0 4px;}
-  .admin-link{background:transparent;color:#8B95A1;border:1px solid #3A4450;font-size:11px;padding:8px 10px;}
-  .admin-link:hover{color:#fff;border-color:#5A6672;}
 
   .promo-strip{overflow:hidden;background:var(--yellow);border-bottom:3px solid var(--charcoal);position:relative;}
   .promo-track{display:flex;width:max-content;animation:scroll-left 28s linear infinite;}
@@ -121,8 +119,6 @@
   .pmodal .buy-row{display:flex;gap:10px;align-items:center;}
 
   footer{background:var(--charcoal);color:#8B95A1;padding:26px 20px;text-align:center;font-size:12px;}
-  footer .admin-foot-link{color:#5A6672;text-decoration:underline;cursor:pointer;background:none;border:none;font-size:11px;margin-top:6px;}
-  footer .admin-foot-link:hover{color:#B7C0C9;}
 
   .admin-shell{background:#fff;border-radius:12px;max-width:960px;width:100%;max-height:92vh;overflow:hidden;display:flex;}
   .login-box{background:#fff;border-radius:12px;max-width:360px;width:100%;padding:32px;text-align:center;}
@@ -217,7 +213,6 @@
   </div>
   <div class="header-actions">
     <button class="icon-btn cart-btn" id="openCartBtn">🛒 Carrito <span class="cart-count" id="cartCount">0</span></button>
-    <button class="icon-btn admin-link" id="openAdminBtn">Admin</button>
   </div>
 </header>
 
@@ -235,7 +230,6 @@
 <footer>
   <div id="storeNameFoot">Ferretería</div>
   <div>Cotiza por WhatsApp — sin registro, sin complicaciones.</div>
-  <button class="admin-foot-link" id="openAdminBtnFoot">Acceso administrador</button>
 </footer>
 
 <div class="overlay" id="cartOverlay">
@@ -339,6 +333,7 @@ async function loadAll(){
 
   renderAll();
   updatePublishBar();
+  checkAdminHash();
 }
 
 function persistDraft(){
@@ -611,10 +606,12 @@ document.getElementById('closeCart').addEventListener('click', function(){ docum
 document.getElementById('cartOverlay').addEventListener('click', function(e){ if(e.target === this) this.classList.remove('show'); });
 
 /* ================= ADMIN ================= */
-function openLogin(){ document.getElementById('loginOverlay').classList.add('show'); document.getElementById('adminPassInput').value=''; document.getElementById('loginErr').textContent=''; }
-document.getElementById('openAdminBtn').addEventListener('click', openLogin);
-document.getElementById('openAdminBtnFoot').addEventListener('click', openLogin);
+function openLogin(){ document.getElementById('loginOverlay').classList.add('show'); document.getElementById('adminPassInput').value=''; document.getElementById('loginErr').textContent=''; document.getElementById('adminPassInput').focus(); }
 document.getElementById('closeLogin').addEventListener('click', function(){ document.getElementById('loginOverlay').classList.remove('show'); });
+
+/* Acceso oculto: no hay botón visible en la tienda. Se abre solo entrando a tusitio.com/#admin */
+function checkAdminHash(){ if(window.location.hash === '#admin'){ openLogin(); } }
+window.addEventListener('hashchange', checkAdminHash);
 document.getElementById('loginOverlay').addEventListener('click', function(e){ if(e.target===this) this.classList.remove('show'); });
 document.getElementById('adminPassInput').addEventListener('keydown', function(e){ if(e.key==='Enter') tryLogin(); });
 document.getElementById('doLogin').addEventListener('click', tryLogin);
