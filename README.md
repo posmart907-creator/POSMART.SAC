@@ -10,6 +10,10 @@ Sitio estático (sin backend) listo para publicar en GitHub Pages. Incluye:
 ## Archivos
 - `index.html` — toda la tienda y el panel admin (un solo archivo)
 - `products.json` — tus productos, categorías, promociones y configuración
+- `logo.png` — tu logo (fondo transparente)
+- `banner-fachada.jpg` — foto de tu local para el banner debajo de las categorías
+
+**Importante:** sube los 4 archivos juntos a la raíz del repositorio. Si falta `logo.png` o `banner-fachada.jpg`, el logo y el banner no van a cargar (products.json los referencia por nombre de archivo).
 
 ## 1. Publicar en GitHub Pages
 
