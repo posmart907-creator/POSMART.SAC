@@ -1,0 +1,29 @@
+{
+  "settings": {
+    "storeName": "Ferretería",
+    "logoEmoji": "🔧",
+    "whatsapp": "51999999999",
+    "currency": "S/"
+  },
+  "categories": [
+    "Herramientas Eléctricas",
+    "Herramientas Manuales",
+    "Construcción",
+    "Plomería",
+    "Electricidad",
+    "Pinturas",
+    "Ferretería General"
+  ],
+  "promos": [
+    { "id": "promo_1", "text": "15% de descuento en herramientas eléctricas esta semana", "badge": "PROMO", "active": true },
+    { "id": "promo_2", "text": "Compra 3 sacos de cemento y llévate el envío gratis en tu zona", "badge": "OFERTA", "active": true }
+  ],
+  "products": [
+    { "id": "p_1", "name": "Taladro Percutor 1/2\"", "description": "Taladro percutor de 750W, mandril de 13mm, incluye maletín y broca de prueba. Ideal para concreto, madera y metal.", "price": 249.90, "category": "Herramientas Eléctricas", "images": ["https://placehold.co/500x500/1F2933/FFC845?text=Taladro"] },
+    { "id": "p_2", "name": "Martillo de Uña 16oz", "description": "Mango de fibra de vidrio antideslizante, cabeza forjada en acero al carbono. Resistente y balanceado.", "price": 29.90, "category": "Herramientas Manuales", "images": ["https://placehold.co/500x500/1F2933/FFC845?text=Martillo"] },
+    { "id": "p_3", "name": "Cemento Portland 42.5kg", "description": "Saco de cemento tipo I, ideal para estructuras, columnas y trabajos de albañilería en general.", "price": 28.50, "category": "Construcción", "images": ["https://placehold.co/500x500/1F2933/FFC845?text=Cemento"] },
+    { "id": "p_4", "name": "Tubo PVC 1/2\" x 5m", "description": "Tubo PVC para agua fría, presión de trabajo estándar, roscable en ambos extremos.", "price": 12.90, "category": "Plomería", "images": ["https://placehold.co/500x500/1F2933/FFC845?text=Tubo+PVC"] },
+    { "id": "p_5", "name": "Cable THW 12 AWG (rollo 100m)", "description": "Cable de cobre para instalaciones eléctricas residenciales, aislamiento THW 600V.", "price": 189.00, "category": "Electricidad", "images": ["https://placehold.co/500x500/1F2933/FFC845?text=Cable"] },
+    { "id": "p_6", "name": "Pintura Látex Blanco 1 Galón", "description": "Pintura lavable de alto rendimiento, acabado mate, cubre hasta 40m2 por galón.", "price": 65.00, "category": "Pinturas", "images": ["https://placehold.co/500x500/1F2933/FFC845?text=Pintura"] }
+  ]
+}
