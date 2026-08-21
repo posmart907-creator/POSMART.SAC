@@ -1,9 +1,16 @@
 {
   "settings": {
-    "storeName": "POSMART SAC",
+    "storeName": "POSMART Homecenter",
     "logoEmoji": "🔧",
-    "whatsapp": "51999999999",
-    "currency": "S/"
+    "logoImage": "./logo.png",
+    "whatsapp": "51933482945",
+    "currency": "S/",
+    "bannerImage": "./banner-fachada.jpg",
+    "bannerText": "",
+    "bannerActive": true,
+    "footerBannerImage": "./banner-rifa.jpg",
+    "footerBannerText": "",
+    "footerBannerActive": true
   },
   "categories": [
     "Herramientas Eléctricas",
