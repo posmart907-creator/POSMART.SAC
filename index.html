@@ -212,7 +212,7 @@
 <header class="top">
   <div class="brand">
     <div class="logo" id="storeLogo" style="overflow:hidden;">🔧</div>
-    <div>
+    <div id="brandText">
       <h1 id="storeName">Ferretería</h1>
       <small>Catálogo y cotización rápida</small>
     </div>
@@ -393,18 +393,21 @@ function renderAll(){
   document.getElementById('storeName').textContent = DATA.settings.storeName;
   document.getElementById('storeNameFoot').textContent = DATA.settings.storeName;
   var logoEl = document.getElementById('storeLogo');
+  var brandTextEl = document.getElementById('brandText');
   if(DATA.settings.logoImage){
-    logoEl.innerHTML = '<img src="' + escapeAttr(DATA.settings.logoImage) + '" alt="Logo" style="object-fit:contain;">';
+    logoEl.innerHTML = '<img src="' + escapeAttr(DATA.settings.logoImage) + '" alt="' + escapeAttr(DATA.settings.storeName) + '" style="object-fit:contain;">';
     logoEl.style.width = 'auto';
-    logoEl.style.height = '38px';
+    logoEl.style.height = '46px';
     logoEl.style.background = 'transparent';
     logoEl.style.padding = '0 2px';
+    brandTextEl.style.display = 'none';
   } else {
     logoEl.textContent = DATA.settings.logoEmoji || '🔧';
     logoEl.style.width = '38px';
     logoEl.style.height = '38px';
     logoEl.style.background = 'var(--orange)';
     logoEl.style.padding = '0';
+    brandTextEl.style.display = 'block';
   }
   renderPromoStrip();
   renderStorefrontBanner();
