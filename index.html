@@ -61,6 +61,10 @@
   .storefront-banner img{width:100%;max-height:320px;object-fit:cover;display:block;}
   .storefront-banner .sb-caption{padding:14px 18px;color:#fff;font-size:14px;font-weight:600;background:var(--charcoal-2);}
 
+  .footer-banner{max-width:600px;margin:36px auto 0;padding:0 20px;text-align:center;}
+  .footer-banner img{width:100%;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.18);display:block;}
+  .footer-banner .fb-caption{margin-top:10px;font-size:13px;color:var(--muted);font-weight:600;}
+
   .filters-bar{max-width:1200px;margin:0 auto;padding:16px 20px 4px;display:flex;gap:8px;flex-wrap:wrap;}
   .chip{background:#fff;border:1px solid var(--border);padding:8px 16px;border-radius:20px;font-size:13px;font-weight:600;color:var(--muted);}
   .chip:hover{border-color:var(--orange);color:var(--charcoal);}
@@ -226,14 +230,16 @@
   <div class="promo-track" id="promoTrack"></div>
 </div>
 
-<div class="filters-bar" id="categoryChips"></div>
-
 <div class="storefront-banner" id="storefrontBanner" style="display:none;"></div>
+
+<div class="filters-bar" id="categoryChips"></div>
 
 <main>
   <p class="results-info" id="resultsInfo"></p>
   <div class="grid" id="productGrid"></div>
 </main>
+
+<div class="footer-banner" id="footerBanner" style="display:none;"></div>
 
 <footer>
   <div id="storeNameFoot">Ferretería</div>
@@ -294,7 +300,7 @@
 (function(){
 
 var DEFAULT_DATA = {
-  settings: { storeName:'Ferretería', logoEmoji:'🔧', logoImage:'', whatsapp:'51999999999', currency:'S/', bannerImage:'', bannerText:'', bannerActive:false },
+  settings: { storeName:'Ferretería', logoEmoji:'🔧', logoImage:'', whatsapp:'51999999999', currency:'S/', bannerImage:'', bannerText:'', bannerActive:false, footerBannerImage:'', footerBannerText:'', footerBannerActive:false },
   categories: ['Herramientas Eléctricas','Herramientas Manuales','Construcción','Plomería','Electricidad','Pinturas','Ferretería General'],
   promos: [],
   products: []
@@ -402,6 +408,7 @@ function renderAll(){
   }
   renderPromoStrip();
   renderStorefrontBanner();
+  renderFooterBanner();
   renderCategoryChips();
   renderGrid();
   renderCart();
@@ -414,6 +421,14 @@ function renderStorefrontBanner(){
   wrap.innerHTML = '<div class="sb-card"><img src="' + escapeAttr(DATA.settings.bannerImage) + '" alt="' + escapeAttr(DATA.settings.storeName) + '">' +
     (DATA.settings.bannerText ? '<div class="sb-caption">' + escapeHtml(DATA.settings.bannerText) + '</div>' : '') +
     '</div>';
+}
+
+function renderFooterBanner(){
+  var wrap = document.getElementById('footerBanner');
+  if(!DATA.settings.footerBannerActive || !DATA.settings.footerBannerImage){ wrap.style.display='none'; wrap.innerHTML=''; return; }
+  wrap.style.display='block';
+  wrap.innerHTML = '<img src="' + escapeAttr(DATA.settings.footerBannerImage) + '" alt="Promoción">' +
+    (DATA.settings.footerBannerText ? '<div class="fb-caption">' + escapeHtml(DATA.settings.footerBannerText) + '</div>' : '');
 }
 
 function renderPromoStrip(){
@@ -945,6 +960,16 @@ function renderAdminSettings(){
     '<div style="margin-top:10px;"><label style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.3px;display:block;margin-bottom:5px;">Texto del banner (opcional)</label><input class="field" id="sBannerText" value="' + escapeAttr(DATA.settings.bannerText||'') + '" placeholder="Ej: Visítanos en Av. Principal 123"></div>' +
     '<label class="promo-toggle" style="margin-top:10px;"><span class="switch' + (DATA.settings.bannerActive?' on':'') + '" id="sBannerToggle"></span>' + (DATA.settings.bannerActive?'Banner activo':'Banner inactivo') + '</label>' +
 
+    '<h3 style="font-size:16px;margin-top:22px;">Banner de promoción (arriba, debajo del descuento)</h3>' +
+    '<p class="admin-sub">Aparece justo debajo de la franja de descuentos, antes de las categorías. Ideal para flyers de promociones o sorteos (formatos verticales caben bien aquí).</p>' +
+    '<div class="img-slot" style="width:140px;" id="footerBannerSlotWrap">' +
+      '<div class="preview" style="width:140px;height:140px;border-radius:8px;">' + (DATA.settings.footerBannerImage ? '<img src="' + escapeAttr(DATA.settings.footerBannerImage) + '"><button class="rm-img" id="rmFooterBannerImg">✕</button>' : '<span style="font-size:11px;color:#B9BFC5;">Sin imagen</span>') + '</div>' +
+      '<input type="text" class="field url-field" placeholder="URL de imagen" id="sFooterBannerUrl" value="' + (DATA.settings.footerBannerImage && DATA.settings.footerBannerImage.indexOf('data:')!==0 ? escapeAttr(DATA.settings.footerBannerImage) : '') + '">' +
+      '<input type="file" accept="image/*" id="sFooterBannerFile">' +
+    '</div>' +
+    '<div style="margin-top:10px;"><label style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.3px;display:block;margin-bottom:5px;">Texto debajo (opcional)</label><input class="field" id="sFooterBannerText" value="' + escapeAttr(DATA.settings.footerBannerText||'') + '" placeholder="Ej: Promoción válida hasta fin de mes"></div>' +
+    '<label class="promo-toggle" style="margin-top:10px;"><span class="switch' + (DATA.settings.footerBannerActive?' on':'') + '" id="sFooterBannerToggle"></span>' + (DATA.settings.footerBannerActive?'Banner activo':'Banner inactivo') + '</label>' +
+
     '<div class="save-row"><button class="btn-primary" id="saveSettingsBtn" style="width:auto;padding:11px 22px;">Guardar configuración</button></div>' +
     '<hr style="margin:28px 0;border:none;border-top:1px solid var(--border);">' +
     '<h3 style="font-size:16px;">Zona de reinicio</h3>' +
@@ -954,6 +979,8 @@ function renderAdminSettings(){
   var pendingLogo = DATA.settings.logoImage || '';
   var pendingBanner = DATA.settings.bannerImage || '';
   var pendingBannerActive = !!DATA.settings.bannerActive;
+  var pendingFooterBanner = DATA.settings.footerBannerImage || '';
+  var pendingFooterBannerActive = !!DATA.settings.footerBannerActive;
 
   var rmLogoBtn = document.getElementById('rmLogoImg');
   if(rmLogoBtn) rmLogoBtn.addEventListener('click', function(){ pendingLogo=''; document.getElementById('sLogoUrl').value=''; renderAdminSettings(); });
@@ -974,6 +1001,16 @@ function renderAdminSettings(){
   });
   document.getElementById('sBannerToggle').addEventListener('click', function(){ pendingBannerActive = !pendingBannerActive; DATA.settings.bannerActive = pendingBannerActive; renderAdminSettings(); });
 
+  var rmFooterBannerBtn = document.getElementById('rmFooterBannerImg');
+  if(rmFooterBannerBtn) rmFooterBannerBtn.addEventListener('click', function(){ pendingFooterBanner=''; document.getElementById('sFooterBannerUrl').value=''; renderAdminSettings(); });
+  document.getElementById('sFooterBannerUrl').addEventListener('change', function(e){ if(e.target.value.trim()) pendingFooterBanner = e.target.value.trim(); });
+  document.getElementById('sFooterBannerFile').addEventListener('change', function(e){
+    var file = e.target.files[0]; if(!file) return;
+    compressImageFile(file, 900, 0.78).then(function(dataUrl){ pendingFooterBanner = dataUrl; DATA.settings.footerBannerImage = dataUrl; renderAdminSettings(); })
+      .catch(function(){ showToast('No se pudo procesar la imagen'); });
+  });
+  document.getElementById('sFooterBannerToggle').addEventListener('click', function(){ pendingFooterBannerActive = !pendingFooterBannerActive; DATA.settings.footerBannerActive = pendingFooterBannerActive; renderAdminSettings(); });
+
   document.getElementById('saveSettingsBtn').addEventListener('click', function(){
     DATA.settings.storeName = document.getElementById('sName').value.trim() || DEFAULT_DATA.settings.storeName;
     DATA.settings.logoEmoji = document.getElementById('sLogo').value.trim() || DEFAULT_DATA.settings.logoEmoji;
@@ -983,6 +1020,9 @@ function renderAdminSettings(){
     DATA.settings.bannerImage = pendingBanner;
     DATA.settings.bannerText = document.getElementById('sBannerText').value.trim();
     DATA.settings.bannerActive = pendingBannerActive;
+    DATA.settings.footerBannerImage = pendingFooterBanner;
+    DATA.settings.footerBannerText = document.getElementById('sFooterBannerText').value.trim();
+    DATA.settings.footerBannerActive = pendingFooterBannerActive;
     persistDraft();
     renderAll();
     showToast('Configuración guardada (recuerda descargar y publicar)');
