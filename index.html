@@ -56,10 +56,20 @@
   .promo-item{display:flex;align-items:center;gap:10px;padding:9px 28px;font-weight:700;font-size:13px;color:var(--charcoal-2);white-space:nowrap;border-right:2px dashed rgba(31,41,51,0.35);}
   .promo-item .badge{background:var(--charcoal);color:var(--yellow);padding:2px 8px;border-radius:3px;font-size:11px;font-family:'IBM Plex Mono',monospace;}
 
-  .storefront-banner{max-width:1200px;margin:16px auto 0;padding:0 20px;}
-  .storefront-banner .sb-card{border-radius:12px;overflow:hidden;border:1px solid var(--border);background:var(--charcoal);position:relative;}
-  .storefront-banner img{width:100%;max-height:320px;object-fit:cover;display:block;}
-  .storefront-banner .sb-caption{padding:14px 18px;color:#fff;font-size:14px;font-weight:600;background:var(--charcoal-2);}
+  .banner-carousel{max-width:1200px;margin:16px auto 0;padding:0 20px;}
+  .bc-viewport{position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--border);background:var(--charcoal-2);height:320px;}
+  .bc-track{display:flex;height:100%;transition:transform .5s cubic-bezier(.4,0,.2,1);touch-action:pan-y;}
+  .bc-slide{position:relative;min-width:100%;height:100%;cursor:grab;}
+  .bc-slide img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;}
+  .bc-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(20,26,32,0.88));color:#fff;padding:34px 18px 14px;font-size:14px;font-weight:600;z-index:2;pointer-events:none;}
+  .bc-dots{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:3;}
+  .bc-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.55);border:2px solid rgba(0,0,0,0.15);cursor:pointer;padding:0;transition:all .2s;}
+  .bc-dot.active{background:#fff;width:22px;border-radius:4px;}
+  .bc-arrow{position:absolute;top:50%;transform:translateY(-50%);background:rgba(20,26,32,0.5);color:#fff;border:none;width:32px;height:32px;border-radius:50%;font-size:15px;z-index:3;display:flex;align-items:center;justify-content:center;}
+  .bc-arrow:hover{background:rgba(20,26,32,0.8);}
+  .bc-arrow.prev{left:10px;}
+  .bc-arrow.next{right:10px;}
+  @media(max-width:640px){ .bc-viewport{height:200px;} .bc-caption{font-size:12px;padding:26px 14px 10px;} }
 
   .footer-banner{max-width:600px;margin:36px auto 0;padding:0 20px;text-align:center;}
   .footer-banner img{width:100%;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.18);display:block;}
@@ -230,7 +240,7 @@
   <div class="promo-track" id="promoTrack"></div>
 </div>
 
-<div class="storefront-banner" id="storefrontBanner" style="display:none;"></div>
+<div class="banner-carousel" id="bannerCarousel" style="display:none;"></div>
 
 <div class="filters-bar" id="categoryChips"></div>
 
@@ -285,6 +295,7 @@
         <div class="a-title">Panel admin</div>
         <button class="admin-tab active" data-tab="products">📦 Productos</button>
         <button class="admin-tab" data-tab="categories">🏷️ Categorías</button>
+        <button class="admin-tab" data-tab="banners">🖼️ Banner principal</button>
         <button class="admin-tab" data-tab="promos">📣 Promociones</button>
         <button class="admin-tab" data-tab="settings">⚙️ Configuración</button>
         <button class="logout" id="logoutBtn">← Salir</button>
@@ -300,7 +311,7 @@
 (function(){
 
 var DEFAULT_DATA = {
-  settings: { storeName:'Ferretería', logoEmoji:'🔧', logoImage:'', whatsapp:'51999999999', currency:'S/', bannerImage:'', bannerText:'', bannerActive:false, footerBannerImage:'', footerBannerText:'', footerBannerActive:false },
+  settings: { storeName:'Ferretería', logoEmoji:'🔧', logoImage:'', whatsapp:'51999999999', currency:'S/', bannerSlides:[], footerBannerImage:'', footerBannerText:'', footerBannerActive:false },
   categories: ['Herramientas Eléctricas','Herramientas Manuales','Construcción','Plomería','Electricidad','Pinturas','Ferretería General'],
   promos: [],
   products: []
@@ -410,20 +421,84 @@ function renderAll(){
     brandTextEl.style.display = 'block';
   }
   renderPromoStrip();
-  renderStorefrontBanner();
+  renderBannerCarousel();
   renderFooterBanner();
   renderCategoryChips();
   renderGrid();
   renderCart();
 }
 
-function renderStorefrontBanner(){
-  var wrap = document.getElementById('storefrontBanner');
-  if(!DATA.settings.bannerActive || !DATA.settings.bannerImage){ wrap.style.display='none'; wrap.innerHTML=''; return; }
+/* ---------------- BANNER CAROUSEL (arriba, debajo de la franja de ofertas) ---------------- */
+var bcTimer = null;
+var bcIndex = 0;
+function getActiveSlides(){
+  return (DATA.settings.bannerSlides || []).filter(function(s){ return s.active && s.image; });
+}
+function renderBannerCarousel(){
+  var wrap = document.getElementById('bannerCarousel');
+  var slides = getActiveSlides();
+  clearInterval(bcTimer);
+  if(slides.length === 0){ wrap.style.display='none'; wrap.innerHTML=''; return; }
   wrap.style.display='block';
-  wrap.innerHTML = '<div class="sb-card"><img src="' + escapeAttr(DATA.settings.bannerImage) + '" alt="' + escapeAttr(DATA.settings.storeName) + '">' +
-    (DATA.settings.bannerText ? '<div class="sb-caption">' + escapeHtml(DATA.settings.bannerText) + '</div>' : '') +
+  bcIndex = 0;
+
+  var slidesHtml = slides.map(function(s){
+    return '<div class="bc-slide"><img src="' + escapeAttr(s.image) + '" alt="' + escapeAttr(DATA.settings.storeName) + '">' +
+      (s.text ? '<div class="bc-caption">' + escapeHtml(s.text) + '</div>' : '') +
+      '</div>';
+  }).join('');
+  var dotsHtml = slides.map(function(s,i){ return '<button class="bc-dot' + (i===0?' active':'') + '" data-goto="' + i + '"></button>'; }).join('');
+  var arrowsHtml = slides.length > 1 ? '<button class="bc-arrow prev" id="bcPrev">‹</button><button class="bc-arrow next" id="bcNext">›</button>' : '';
+
+  wrap.innerHTML = '<div class="bc-viewport" id="bcViewport">' +
+      '<div class="bc-track" id="bcTrack">' + slidesHtml + '</div>' +
+      arrowsHtml +
+      (slides.length > 1 ? '<div class="bc-dots" id="bcDots">' + dotsHtml + '</div>' : '') +
     '</div>';
+
+  var track = document.getElementById('bcTrack');
+  var viewport = document.getElementById('bcViewport');
+
+  function goTo(i){
+    bcIndex = ((i % slides.length) + slides.length) % slides.length;
+    track.style.transform = 'translateX(-' + (bcIndex * 100) + '%)';
+    var dots = wrap.querySelectorAll('.bc-dot');
+    dots.forEach(function(d,idx){ d.classList.toggle('active', idx === bcIndex); });
+  }
+  function next(){ goTo(bcIndex + 1); }
+  function prev(){ goTo(bcIndex - 1); }
+  function startAuto(){ clearInterval(bcTimer); if(slides.length > 1) bcTimer = setInterval(next, 4000); }
+
+  if(slides.length > 1){
+    document.getElementById('bcNext').addEventListener('click', function(){ next(); startAuto(); });
+    document.getElementById('bcPrev').addEventListener('click', function(){ prev(); startAuto(); });
+    wrap.querySelectorAll('.bc-dot').forEach(function(dot){
+      dot.addEventListener('click', function(){ goTo(parseInt(dot.getAttribute('data-goto'),10)); startAuto(); });
+    });
+    viewport.addEventListener('mouseenter', function(){ clearInterval(bcTimer); });
+    viewport.addEventListener('mouseleave', startAuto);
+
+    // deslizar con el dedo (touch) o el mouse
+    var startX = null, deltaX = 0, dragging = false;
+    function dragStart(x){ dragging = true; startX = x; deltaX = 0; clearInterval(bcTimer); track.style.transition = 'none'; }
+    function dragMove(x){ if(!dragging) return; deltaX = x - startX; track.style.transform = 'translateX(calc(-' + (bcIndex * 100) + '% + ' + deltaX + 'px))'; }
+    function dragEnd(){
+      if(!dragging) return;
+      dragging = false;
+      track.style.transition = '';
+      if(Math.abs(deltaX) > 50){ deltaX < 0 ? next() : prev(); } else { goTo(bcIndex); }
+      startAuto();
+    }
+    viewport.addEventListener('touchstart', function(e){ dragStart(e.touches[0].clientX); }, {passive:true});
+    viewport.addEventListener('touchmove', function(e){ dragMove(e.touches[0].clientX); }, {passive:true});
+    viewport.addEventListener('touchend', dragEnd);
+    viewport.addEventListener('mousedown', function(e){ dragStart(e.clientX); });
+    window.addEventListener('mousemove', function(e){ dragMove(e.clientX); });
+    window.addEventListener('mouseup', dragEnd);
+  }
+
+  goTo(0);
+  startAuto();
 }
 
 function renderFooterBanner(){
@@ -690,6 +765,7 @@ function setActiveTab(tab){
 function renderAdminTab(){
   if(STATE.adminTab === 'products') renderAdminProducts();
   else if(STATE.adminTab === 'categories') renderAdminCategories();
+  else if(STATE.adminTab === 'banners') renderAdminBanners();
   else if(STATE.adminTab === 'promos') renderAdminPromos();
   else if(STATE.adminTab === 'settings') renderAdminSettings();
 }
@@ -836,6 +912,103 @@ function compressImageFile(file, maxWidth, quality){
   });
 }
 
+/* ---- ADMIN: BANNER PRINCIPAL (carrusel) ---- */
+function renderAdminBanners(){
+  var main = document.getElementById('adminMain');
+  if(!DATA.settings.bannerSlides) DATA.settings.bannerSlides = [];
+  main.innerHTML =
+    '<h2>Banner principal</h2>' +
+    '<p class="admin-sub">Aparece debajo de la franja de ofertas. Si activas más de una imagen, van a rotar solas cada 4 segundos (y la gente también puede deslizar con el dedo).</p>' +
+    '<div class="hint-box">Funciona mejor con imágenes horizontales (anchas). El tamaño ideal es alrededor de 1400×550 px.</div>' +
+    '<div id="bannerSlidesList"></div>' +
+    '<button class="add-new-btn" id="addBannerSlideBtn">+ Nueva imagen al banner</button>';
+
+  function paint(){
+    var slides = DATA.settings.bannerSlides;
+    document.getElementById('bannerSlidesList').innerHTML = slides.map(function(s, i){
+      return '' +
+      '<div class="promo-item-row">' +
+        '<div style="display:flex;gap:14px;">' +
+          '<div class="img-slot" style="width:140px;flex-shrink:0;">' +
+            '<div class="preview" style="width:140px;height:80px;border-radius:8px;">' + (s.image ? '<img src="' + escapeAttr(s.image) + '"><button class="rm-img" data-rmslide="' + i + '">✕</button>' : '<span style="font-size:11px;color:#B9BFC5;">Sin imagen</span>') + '</div>' +
+            '<input type="text" class="field url-field" placeholder="URL de imagen" data-slideurl="' + i + '" value="' + (s.image && s.image.indexOf('data:')!==0 ? escapeAttr(s.image) : '') + '">' +
+            '<input type="file" accept="image/*" data-slidefile="' + i + '">' +
+          '</div>' +
+          '<div style="flex:1;">' +
+            '<label style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.3px;display:block;margin-bottom:5px;">Texto sobre la imagen (opcional)</label>' +
+            '<input class="field" data-slidetext="' + i + '" value="' + escapeAttr(s.text||'') + '" placeholder="Ej: Visítanos en Av. Principal 123">' +
+            '<div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px;">' +
+              '<label class="promo-toggle"><span class="switch' + (s.active?' on':'') + '" data-slidetoggle="' + i + '"></span>' + (s.active?'Activa':'Inactiva') + '</label>' +
+              '<div>' +
+                (i>0 ? '<button class="row-actions ed" data-slideup="' + i + '">↑ Subir</button>' : '') +
+                (i<slides.length-1 ? '<button class="row-actions ed" data-slidedown="' + i + '">↓ Bajar</button>' : '') +
+                '<button class="row-actions del" data-slidedel="' + i + '">Eliminar</button>' +
+              '</div>' +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+      '</div>';
+    }).join('') || '<p class="admin-sub">Todavía no agregaste imágenes al banner.</p>';
+
+    document.querySelectorAll('[data-rmimg],[data-rmslide]').forEach(function(btn){});
+    document.querySelectorAll('[data-rmslide]').forEach(function(btn){
+      btn.addEventListener('click', function(){ DATA.settings.bannerSlides[parseInt(btn.getAttribute('data-rmslide'),10)].image=''; save(); paint(); });
+    });
+    document.querySelectorAll('[data-slideurl]').forEach(function(inp){
+      inp.addEventListener('change', function(){ if(inp.value.trim()){ DATA.settings.bannerSlides[parseInt(inp.getAttribute('data-slideurl'),10)].image = inp.value.trim(); save(); paint(); } });
+    });
+    document.querySelectorAll('[data-slidefile]').forEach(function(inp){
+      inp.addEventListener('change', function(){
+        var idx = parseInt(inp.getAttribute('data-slidefile'),10);
+        var file = inp.files[0]; if(!file) return;
+        compressImageFile(file, 1400, 0.75).then(function(dataUrl){ DATA.settings.bannerSlides[idx].image = dataUrl; save(); paint(); })
+          .catch(function(){ showToast('No se pudo procesar la imagen'); });
+      });
+    });
+    document.querySelectorAll('[data-slidetext]').forEach(function(inp){
+      inp.addEventListener('change', function(){ DATA.settings.bannerSlides[parseInt(inp.getAttribute('data-slidetext'),10)].text = inp.value; save(); });
+    });
+    document.querySelectorAll('[data-slidetoggle]').forEach(function(sw){
+      sw.addEventListener('click', function(){
+        var i = parseInt(sw.getAttribute('data-slidetoggle'),10);
+        DATA.settings.bannerSlides[i].active = !DATA.settings.bannerSlides[i].active;
+        save(); paint();
+      });
+    });
+    document.querySelectorAll('[data-slideup]').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var i = parseInt(btn.getAttribute('data-slideup'),10);
+        var arr = DATA.settings.bannerSlides;
+        var tmp = arr[i-1]; arr[i-1] = arr[i]; arr[i] = tmp;
+        save(); paint();
+      });
+    });
+    document.querySelectorAll('[data-slidedown]').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var i = parseInt(btn.getAttribute('data-slidedown'),10);
+        var arr = DATA.settings.bannerSlides;
+        var tmp = arr[i+1]; arr[i+1] = arr[i]; arr[i] = tmp;
+        save(); paint();
+      });
+    });
+    document.querySelectorAll('[data-slidedel]').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        if(!confirm('¿Quitar esta imagen del banner?')) return;
+        DATA.settings.bannerSlides.splice(parseInt(btn.getAttribute('data-slidedel'),10),1);
+        save(); paint();
+      });
+    });
+  }
+  function save(){ persistDraft(); renderBannerCarousel(); }
+  paint();
+
+  document.getElementById('addBannerSlideBtn').addEventListener('click', function(){
+    DATA.settings.bannerSlides.push({ id: uid('slide'), image:'', text:'', active:true });
+    persistDraft();
+    paint();
+  });
+}
+
 /* ---- ADMIN: CATEGORIES ---- */
 function renderAdminCategories(){
   var main = document.getElementById('adminMain');
@@ -937,7 +1110,7 @@ function renderAdminSettings(){
   var main = document.getElementById('adminMain');
   main.innerHTML =
     '<h2>Configuración</h2>' +
-    '<p class="admin-sub">Datos generales de la tienda, logo, banner de fachada y WhatsApp para recibir cotizaciones.</p>' +
+    '<p class="admin-sub">Datos generales de la tienda, logo y WhatsApp para recibir cotizaciones.</p>' +
     '<div class="form-grid">' +
       '<div><label>Nombre de la tienda</label><input class="field" id="sName" value="' + escapeAttr(DATA.settings.storeName) + '"></div>' +
       '<div><label>WhatsApp (con código de país, sin + ni espacios)</label><input class="field" id="sWa" value="' + escapeAttr(DATA.settings.whatsapp) + '" placeholder="51999999999"></div>' +
@@ -946,25 +1119,16 @@ function renderAdminSettings(){
     '</div>' +
 
     '<h3 style="font-size:16px;margin-top:22px;">Logo de la tienda</h3>' +
-    '<p class="admin-sub">Aparece arriba a la izquierda, junto al nombre. Sube tu logo o pega un enlace de imagen.</p>' +
+    '<p class="admin-sub">Aparece arriba a la izquierda. Sube tu logo o pega un enlace de imagen. Si tu logo ya trae el nombre escrito, el texto de al lado se oculta solo.</p>' +
     '<div class="img-slot" style="width:160px;" id="logoSlotWrap">' +
       '<div class="preview" style="width:160px;height:70px;border-radius:8px;">' + (DATA.settings.logoImage ? '<img src="' + escapeAttr(DATA.settings.logoImage) + '" style="object-fit:contain;background:#141A20;"><button class="rm-img" id="rmLogoImg">✕</button>' : '<span style="font-size:11px;color:#B9BFC5;">Sin logo</span>') + '</div>' +
       '<input type="text" class="field url-field" placeholder="URL de imagen" id="sLogoUrl" value="' + (DATA.settings.logoImage && DATA.settings.logoImage.indexOf('data:')!==0 ? escapeAttr(DATA.settings.logoImage) : '') + '">' +
       '<input type="file" accept="image/*" id="sLogoFile">' +
     '</div>' +
+    '<p class="admin-sub" style="margin-top:14px;">¿Quieres agregar o cambiar las imágenes que rotan debajo de la franja de ofertas? Eso se maneja en la pestaña <strong>🖼️ Banner principal</strong>.</p>' +
 
-    '<h3 style="font-size:16px;margin-top:22px;">Banner de fachada / publicidad</h3>' +
-    '<p class="admin-sub">Aparece debajo de las categorías, antes de los productos. Ideal en formato horizontal (ancho, no tan alto).</p>' +
-    '<div class="img-slot" style="width:220px;" id="bannerSlotWrap">' +
-      '<div class="preview" style="width:220px;height:110px;border-radius:8px;">' + (DATA.settings.bannerImage ? '<img src="' + escapeAttr(DATA.settings.bannerImage) + '"><button class="rm-img" id="rmBannerImg">✕</button>' : '<span style="font-size:11px;color:#B9BFC5;">Sin banner</span>') + '</div>' +
-      '<input type="text" class="field url-field" placeholder="URL de imagen" id="sBannerUrl" value="' + (DATA.settings.bannerImage && DATA.settings.bannerImage.indexOf('data:')!==0 ? escapeAttr(DATA.settings.bannerImage) : '') + '">' +
-      '<input type="file" accept="image/*" id="sBannerFile">' +
-    '</div>' +
-    '<div style="margin-top:10px;"><label style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.3px;display:block;margin-bottom:5px;">Texto del banner (opcional)</label><input class="field" id="sBannerText" value="' + escapeAttr(DATA.settings.bannerText||'') + '" placeholder="Ej: Visítanos en Av. Principal 123"></div>' +
-    '<label class="promo-toggle" style="margin-top:10px;"><span class="switch' + (DATA.settings.bannerActive?' on':'') + '" id="sBannerToggle"></span>' + (DATA.settings.bannerActive?'Banner activo':'Banner inactivo') + '</label>' +
-
-    '<h3 style="font-size:16px;margin-top:22px;">Banner de promoción (arriba, debajo del descuento)</h3>' +
-    '<p class="admin-sub">Aparece justo debajo de la franja de descuentos, antes de las categorías. Ideal para flyers de promociones o sorteos (formatos verticales caben bien aquí).</p>' +
+    '<h3 style="font-size:16px;margin-top:22px;">Banner secundario (antes del pie de página)</h3>' +
+    '<p class="admin-sub">Una sola imagen, aparece al final de la tienda, cuando el cliente ya vio el catálogo. Útil para una promoción extra.</p>' +
     '<div class="img-slot" style="width:140px;" id="footerBannerSlotWrap">' +
       '<div class="preview" style="width:140px;height:140px;border-radius:8px;">' + (DATA.settings.footerBannerImage ? '<img src="' + escapeAttr(DATA.settings.footerBannerImage) + '"><button class="rm-img" id="rmFooterBannerImg">✕</button>' : '<span style="font-size:11px;color:#B9BFC5;">Sin imagen</span>') + '</div>' +
       '<input type="text" class="field url-field" placeholder="URL de imagen" id="sFooterBannerUrl" value="' + (DATA.settings.footerBannerImage && DATA.settings.footerBannerImage.indexOf('data:')!==0 ? escapeAttr(DATA.settings.footerBannerImage) : '') + '">' +
@@ -980,15 +1144,11 @@ function renderAdminSettings(){
     '<button class="btn-secondary" id="resetDraftBtn" style="width:auto;padding:10px 18px;color:var(--red);border-color:var(--red);">Descartar cambios locales</button>';
 
   var pendingLogo = DATA.settings.logoImage || '';
-  var pendingBanner = DATA.settings.bannerImage || '';
-  var pendingBannerActive = !!DATA.settings.bannerActive;
   var pendingFooterBanner = DATA.settings.footerBannerImage || '';
   var pendingFooterBannerActive = !!DATA.settings.footerBannerActive;
 
   var rmLogoBtn = document.getElementById('rmLogoImg');
   if(rmLogoBtn) rmLogoBtn.addEventListener('click', function(){ pendingLogo=''; document.getElementById('sLogoUrl').value=''; renderAdminSettings(); });
-  var rmBannerBtn = document.getElementById('rmBannerImg');
-  if(rmBannerBtn) rmBannerBtn.addEventListener('click', function(){ pendingBanner=''; document.getElementById('sBannerUrl').value=''; renderAdminSettings(); });
 
   document.getElementById('sLogoUrl').addEventListener('change', function(e){ if(e.target.value.trim()) pendingLogo = e.target.value.trim(); });
   document.getElementById('sLogoFile').addEventListener('change', function(e){
@@ -996,13 +1156,6 @@ function renderAdminSettings(){
     compressImageFile(file, 400, 0.85).then(function(dataUrl){ pendingLogo = dataUrl; DATA.settings.logoImage = dataUrl; renderAdminSettings(); })
       .catch(function(){ showToast('No se pudo procesar la imagen'); });
   });
-  document.getElementById('sBannerUrl').addEventListener('change', function(e){ if(e.target.value.trim()) pendingBanner = e.target.value.trim(); });
-  document.getElementById('sBannerFile').addEventListener('change', function(e){
-    var file = e.target.files[0]; if(!file) return;
-    compressImageFile(file, 1200, 0.75).then(function(dataUrl){ pendingBanner = dataUrl; DATA.settings.bannerImage = dataUrl; renderAdminSettings(); })
-      .catch(function(){ showToast('No se pudo procesar la imagen'); });
-  });
-  document.getElementById('sBannerToggle').addEventListener('click', function(){ pendingBannerActive = !pendingBannerActive; DATA.settings.bannerActive = pendingBannerActive; renderAdminSettings(); });
 
   var rmFooterBannerBtn = document.getElementById('rmFooterBannerImg');
   if(rmFooterBannerBtn) rmFooterBannerBtn.addEventListener('click', function(){ pendingFooterBanner=''; document.getElementById('sFooterBannerUrl').value=''; renderAdminSettings(); });
@@ -1020,9 +1173,6 @@ function renderAdminSettings(){
     DATA.settings.whatsapp = document.getElementById('sWa').value.replace(/[^0-9]/g,'');
     DATA.settings.currency = document.getElementById('sCur').value.trim() || DEFAULT_DATA.settings.currency;
     DATA.settings.logoImage = pendingLogo;
-    DATA.settings.bannerImage = pendingBanner;
-    DATA.settings.bannerText = document.getElementById('sBannerText').value.trim();
-    DATA.settings.bannerActive = pendingBannerActive;
     DATA.settings.footerBannerImage = pendingFooterBanner;
     DATA.settings.footerBannerText = document.getElementById('sFooterBannerText').value.trim();
     DATA.settings.footerBannerActive = pendingFooterBannerActive;

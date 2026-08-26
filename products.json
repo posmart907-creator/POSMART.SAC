@@ -5,12 +5,23 @@
     "logoImage": "./logo.png",
     "whatsapp": "51933482945",
     "currency": "S/",
-    "bannerImage": "./banner-fachada.jpg",
-    "bannerText": "",
-    "bannerActive": true,
-    "footerBannerImage": "./banner-rifa.jpg",
+    "footerBannerImage": "",
     "footerBannerText": "",
-    "footerBannerActive": true
+    "footerBannerActive": false,
+    "bannerSlides": [
+      {
+        "id": "slide_fachada",
+        "image": "./banner-fachada.jpg",
+        "text": "",
+        "active": true
+      },
+      {
+        "id": "slide_rifa",
+        "image": "./banner-rifa.jpg",
+        "text": "",
+        "active": true
+      }
+    ]
   },
   "categories": [
     "Herramientas Eléctricas",
@@ -43,7 +54,7 @@
       "price": 249.9,
       "category": "Herramientas Eléctricas",
       "images": [
-        "https://tse3.mm.bing.net/th/id/OIP.3O_QtZcxUNE6X32pUJ05IQHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+        "https://placehold.co/500x500/1F2933/FFC845?text=Taladro"
       ]
     },
     {
@@ -80,7 +91,7 @@
       "id": "p_5",
       "name": "Cable THW 12 AWG (rollo 100m)",
       "description": "Cable de cobre para instalaciones eléctricas residenciales, aislamiento THW 600V.",
-      "price": 189,
+      "price": 189.0,
       "category": "Electricidad",
       "images": [
         "https://placehold.co/500x500/1F2933/FFC845?text=Cable"
@@ -90,20 +101,10 @@
       "id": "p_6",
       "name": "Pintura Látex Blanco 1 Galón",
       "description": "Pintura lavable de alto rendimiento, acabado mate, cubre hasta 40m2 por galón.",
-      "price": 65,
+      "price": 65.0,
       "category": "Pinturas",
       "images": [
         "https://placehold.co/500x500/1F2933/FFC845?text=Pintura"
-      ]
-    },
-    {
-      "id": "p_mt0mq30b_1wrel",
-      "name": "cemento apu",
-      "description": "Bolsa de cemento apu x 42.5kg",
-      "price": 27,
-      "category": "Construcción",
-      "images": [
-        "https://tse4.mm.bing.net/th/id/OIP.VOewN0IXk5tepCdDBrT4DgHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
       ]
     }
   ]
