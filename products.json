@@ -110,14 +110,16 @@
   ],
   "branches": [
     {
-      "id": "branch_1",
-      "name": "Sucursal 1",
-      "address": "Av. Unión Lt. 04 Mz. 01"
+      "id": "branch_panamericana",
+      "name": "Sucursal Panamericana Sur",
+      "address": "Av. Panamericana Sur 884",
+      "mapsUrl": "https://maps.app.goo.gl/MzEbo9dQfzK2FMhG7"
     },
     {
-      "id": "branch_2",
-      "name": "Sucursal 2",
-      "address": "Av. Panamericana Sur 884"
+      "id": "branch_union",
+      "name": "Sucursal Av. Unión",
+      "address": "Av. Unión Lt. 04 Mz. 01",
+      "mapsUrl": "https://www.google.com/maps/@-13.4020997,-76.1408235,112a,75y,271.79h,83.14t/data=!3m7!1e1!3m5!1siy9aVu5QSSSNQCkWO6GaHw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D6.859641986162757%26panoid%3Diy9aVu5QSSSNQCkWO6GaHw%26yaw%3D271.7913245808505!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MDgyNS4wIKXMDSoASAFQAw%3D%3D"
     }
   ]
 }
