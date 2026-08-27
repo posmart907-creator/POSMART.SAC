@@ -107,5 +107,17 @@
         "https://placehold.co/500x500/1F2933/FFC845?text=Pintura"
       ]
     }
+  ],
+  "branches": [
+    {
+      "id": "branch_1",
+      "name": "Sucursal 1",
+      "address": "Av. Unión Lt. 04 Mz. 01"
+    },
+    {
+      "id": "branch_2",
+      "name": "Sucursal 2",
+      "address": "Av. Panamericana Sur 884"
+    }
   ]
 }

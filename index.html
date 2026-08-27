@@ -139,6 +139,12 @@
   .pmodal .buy-row{display:flex;gap:10px;align-items:center;}
 
   footer{background:var(--charcoal);color:#8B95A1;padding:26px 20px;text-align:center;font-size:12px;}
+  .branches-wrap{max-width:640px;margin:20px auto 0;display:flex;flex-wrap:wrap;justify-content:center;gap:12px;border-top:1px solid #2B3540;padding-top:20px;}
+  .branch-card{background:#1B242D;border:1px solid #2B3540;border-radius:8px;padding:12px 16px;text-align:left;flex:1;min-width:220px;max-width:280px;text-decoration:none;display:block;transition:border-color .15s,background .15s;}
+  .branch-card:hover{border-color:var(--orange);background:#222D38;}
+  .branch-card .bname{color:#fff;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px;display:flex;align-items:center;gap:6px;}
+  .branch-card .baddr{color:#9AA4AF;font-size:12.5px;line-height:1.4;}
+  .branch-card .bmap{color:var(--orange);font-size:11px;font-weight:700;margin-top:6px;display:inline-block;}
 
   .admin-shell{background:#fff;border-radius:12px;max-width:960px;width:100%;max-height:92vh;overflow:hidden;display:flex;}
   .login-box{background:#fff;border-radius:12px;max-width:360px;width:100%;padding:32px;text-align:center;}
@@ -254,6 +260,7 @@
 <footer>
   <div id="storeNameFoot">Ferretería</div>
   <div>Cotiza por WhatsApp — sin registro, sin complicaciones.</div>
+  <div class="branches-wrap" id="branchesWrap" style="display:none;"></div>
 </footer>
 
 <div class="overlay" id="cartOverlay">
@@ -296,6 +303,7 @@
         <button class="admin-tab active" data-tab="products">📦 Productos</button>
         <button class="admin-tab" data-tab="categories">🏷️ Categorías</button>
         <button class="admin-tab" data-tab="banners">🖼️ Banner principal</button>
+        <button class="admin-tab" data-tab="branches">📍 Sucursales</button>
         <button class="admin-tab" data-tab="promos">📣 Promociones</button>
         <button class="admin-tab" data-tab="settings">⚙️ Configuración</button>
         <button class="logout" id="logoutBtn">← Salir</button>
@@ -312,6 +320,7 @@
 
 var DEFAULT_DATA = {
   settings: { storeName:'Ferretería', logoEmoji:'🔧', logoImage:'', whatsapp:'51999999999', currency:'S/', bannerSlides:[], footerBannerImage:'', footerBannerText:'', footerBannerActive:false },
+  branches: [],
   categories: ['Herramientas Eléctricas','Herramientas Manuales','Construcción','Plomería','Electricidad','Pinturas','Ferretería General'],
   promos: [],
   products: []
@@ -344,6 +353,7 @@ async function loadAll(){
   published.categories = published.categories || [];
   published.promos = published.promos || [];
   published.products = published.products || [];
+  published.branches = published.branches || [];
   published.settings = Object.assign({}, DEFAULT_DATA.settings, published.settings || {});
   PUBLISHED_DATA = published;
 
@@ -423,9 +433,25 @@ function renderAll(){
   renderPromoStrip();
   renderBannerCarousel();
   renderFooterBanner();
+  renderBranches();
   renderCategoryChips();
   renderGrid();
   renderCart();
+}
+
+function renderBranches(){
+  var wrap = document.getElementById('branchesWrap');
+  var list = DATA.branches || [];
+  if(list.length === 0){ wrap.style.display='none'; wrap.innerHTML=''; return; }
+  wrap.style.display='flex';
+  wrap.innerHTML = list.map(function(b){
+    var mapsUrl = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(b.address);
+    return '<a class="branch-card" href="' + escapeAttr(mapsUrl) + '" target="_blank" rel="noopener">' +
+      '<div class="bname">📍 ' + escapeHtml(b.name || 'Sucursal') + '</div>' +
+      '<div class="baddr">' + escapeHtml(b.address) + '</div>' +
+      '<span class="bmap">Ver en Google Maps →</span>' +
+    '</a>';
+  }).join('');
 }
 
 /* ---------------- BANNER CAROUSEL (arriba, debajo de la franja de ofertas) ---------------- */
@@ -766,6 +792,7 @@ function renderAdminTab(){
   if(STATE.adminTab === 'products') renderAdminProducts();
   else if(STATE.adminTab === 'categories') renderAdminCategories();
   else if(STATE.adminTab === 'banners') renderAdminBanners();
+  else if(STATE.adminTab === 'branches') renderAdminBranches();
   else if(STATE.adminTab === 'promos') renderAdminPromos();
   else if(STATE.adminTab === 'settings') renderAdminSettings();
 }
@@ -1004,6 +1031,53 @@ function renderAdminBanners(){
 
   document.getElementById('addBannerSlideBtn').addEventListener('click', function(){
     DATA.settings.bannerSlides.push({ id: uid('slide'), image:'', text:'', active:true });
+    persistDraft();
+    paint();
+  });
+}
+
+/* ---- ADMIN: SUCURSALES ---- */
+function renderAdminBranches(){
+  var main = document.getElementById('adminMain');
+  if(!DATA.branches) DATA.branches = [];
+  main.innerHTML =
+    '<h2>Sucursales</h2>' +
+    '<p class="admin-sub">Aparecen al final de la tienda, con un enlace directo a Google Maps para cada una.</p>' +
+    '<div id="branchesList"></div>' +
+    '<button class="add-new-btn" id="addBranchBtn">+ Nueva sucursal</button>';
+
+  function paint(){
+    var list = DATA.branches;
+    document.getElementById('branchesList').innerHTML = list.map(function(b, i){
+      return '' +
+      '<div class="promo-item-row">' +
+        '<div style="display:flex;gap:10px;margin-bottom:8px;">' +
+          '<input class="field" style="width:180px;" data-bname="' + i + '" value="' + escapeAttr(b.name||'') + '" placeholder="Nombre (ej: Sucursal Norte)">' +
+          '<input class="field" data-baddr="' + i + '" value="' + escapeAttr(b.address||'') + '" placeholder="Dirección completa">' +
+        '</div>' +
+        '<div style="text-align:right;"><button class="row-actions del" data-bdel="' + i + '">Eliminar</button></div>' +
+      '</div>';
+    }).join('') || '<p class="admin-sub">Todavía no agregaste sucursales.</p>';
+
+    document.querySelectorAll('[data-bname]').forEach(function(inp){
+      inp.addEventListener('change', function(){ DATA.branches[parseInt(inp.getAttribute('data-bname'),10)].name = inp.value; save(); });
+    });
+    document.querySelectorAll('[data-baddr]').forEach(function(inp){
+      inp.addEventListener('change', function(){ DATA.branches[parseInt(inp.getAttribute('data-baddr'),10)].address = inp.value; save(); });
+    });
+    document.querySelectorAll('[data-bdel]').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        if(!confirm('¿Eliminar esta sucursal?')) return;
+        DATA.branches.splice(parseInt(btn.getAttribute('data-bdel'),10),1);
+        save(); paint();
+      });
+    });
+  }
+  function save(){ persistDraft(); renderBranches(); }
+  paint();
+
+  document.getElementById('addBranchBtn').addEventListener('click', function(){
+    DATA.branches.push({ id: uid('branch'), name:'', address:'' });
     persistDraft();
     paint();
   });
