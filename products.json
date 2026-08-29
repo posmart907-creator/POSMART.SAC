@@ -30,7 +30,9 @@
     "Plomería",
     "Electricidad",
     "Pinturas",
-    "Ferretería General"
+    "Ferretería General",
+    "ELECTRICIDAD",
+    "CONSTRUCCION"
   ],
   "promos": [
     {
@@ -105,6 +107,462 @@
       "category": "Pinturas",
       "images": [
         "https://placehold.co/500x500/1F2933/FFC845?text=Pintura"
+      ]
+    },
+    {
+      "id": "p_mtejm7v8_vtp3e",
+      "name": "TUBO SEL 3/4 DE LUZ - PAVCO",
+      "description": "Tubo de 3/4\" x 3 metros, ideal para instalaciones eléctricas y conducción segura de cables.",
+      "price": 1,
+      "category": "ELECTRICIDAD",
+      "images": [
+        "https://media.falabella.com/sodimacPE/19879X_01/w%3D1500%2Ch%3D1500%2Cfit%3Dcover?utm_source=chatgpt.com"
+      ]
+    },
+    {
+      "id": "p_mtejm7v8_kjiwk",
+      "name": "TUBO SEL 5/8 DE LUZ - PAVCO",
+      "description": "Tubo de 5/8\" x 3 metros, práctico para proteger y organizar el cableado eléctrico.",
+      "price": 1,
+      "category": "ELECTRICIDAD",
+      "images": [
+        "https://media.falabella.com/sodimacPE/199044_01/w%3D1500%2Ch%3D1500%2Cfit%3Dcover?utm_source=chatgpt.com"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_9tc9y",
+      "name": "TUBO SEL 1\" DE LUZ - PAVCO",
+      "description": "Tubo de 1\" x 3 metros, recomendado para canalizaciones eléctricas con mayor espacio para cables.",
+      "price": 1,
+      "category": "ELECTRICIDAD",
+      "images": [
+        "https://media.falabella.com/sodimacPE/199044_01/w%3D1500%2Ch%3D1500%2Cfit%3Dcover?utm_source=chatgpt.com"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_qobau",
+      "name": "TUBO SEL 1/2 DE LUZ - PAVCO",
+      "description": "Tubo de 1/2\" x 3 metros, perfecto para instalaciones eléctricas residenciales y comerciales.",
+      "price": 1,
+      "category": "ELECTRICIDAD",
+      "images": [
+        "https://media.falabella.com/sodimacPE/199044_01/w%3D1500%2Ch%3D1500%2Cfit%3Dcover?utm_source=chatgpt.com"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_2ayns",
+      "name": "TUBO SAP 3/4 DE LUZ - PAVCO",
+      "description": "Tubo SAP de 3/4\" x 3 metros, ideal para canalizar y proteger los conductores eléctricos.",
+      "price": 1,
+      "category": "ELECTRICIDAD",
+      "images": [
+        "https://malvinasferreteros.com/wp-content/uploads/2023/03/tubo-pvc-con-rosca-para-agua-de-34x5m-c10-pavco.jpg"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_k1mq0",
+      "name": "TUBO SAP 5/8 DE LUZ - PAVCO",
+      "description": "Tubo SAP de 5/8\" x 3 metros, diseñado para una distribución ordenada del cableado eléctrico.",
+      "price": 1,
+      "category": "ELECTRICIDAD",
+      "images": [
+        "https://malvinasferreteros.com/wp-content/uploads/2023/03/tubo-pvc-con-rosca-para-agua-de-34x5m-c10-pavco.jpg"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_rkacn",
+      "name": "TUBO SAP 1\" DE LUZ - PAVCO",
+      "description": "Tubo SAP de 1\" x 3 metros, adecuado para proyectos que requieren mayor capacidad de canalización.",
+      "price": 1,
+      "category": "ELECTRICIDAD",
+      "images": [
+        "https://malvinasferreteros.com/wp-content/uploads/2023/03/tubo-pvc-con-rosca-para-agua-de-34x5m-c10-pavco.jpg"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_cfeox",
+      "name": "TUBO SAP 1/2 DE LUZ - PAVCO",
+      "description": "Tubo SAP de 1/2\" x 3 metros, práctico para instalaciones eléctricas compactas y organizadas.",
+      "price": 1,
+      "category": "ELECTRICIDAD",
+      "images": [
+        "https://malvinasferreteros.com/wp-content/uploads/2023/03/tubo-pvc-con-rosca-para-agua-de-34x5m-c10-pavco.jpg"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_p9mak",
+      "name": "CURVA SEL 3/4 DE LUZ - PAVCO",
+      "description": "Curva SEL de 3/4\", ideal para realizar cambios de dirección en instalaciones eléctricas.",
+      "price": 1,
+      "category": "ELECTRICIDAD",
+      "images": [
+        "https://media.falabella.com/sodimacPE/199109_01/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_iq04m",
+      "name": "CURVA SEL 5/8 DE LUZ - PAVCO",
+      "description": "Curva SEL de 5/8\", práctica para conectar tuberías y facilitar el recorrido del cableado.",
+      "price": 1,
+      "category": "ELECTRICIDAD",
+      "images": [
+        "https://media.falabella.com/sodimacPE/199109_01/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_1ok4p",
+      "name": "CURVA SEL 1\" DE LUZ - PAVCO",
+      "description": "Curva SEL de 1\", diseñada para adaptar la dirección de la tubería en canalizaciones eléctricas.",
+      "price": 1,
+      "category": "ELECTRICIDAD",
+      "images": [
+        "https://media.falabella.com/sodimacPE/199109_01/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_nlvti",
+      "name": "CURVA SEL 1/2 DE LUZ - PAVCO",
+      "description": "Curva SEL de 1/2\", útil para realizar giros de forma práctica en instalaciones eléctricas.",
+      "price": 1,
+      "category": "ELECTRICIDAD",
+      "images": [
+        "https://media.falabella.com/sodimacPE/199109_01/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_89sg6",
+      "name": "CAJA OCTAGONAL - PAVCO",
+      "description": "Caja octagonal PAVCO para instalaciones eléctricas, ideal para conexiones y montaje de luminarias.",
+      "price": 1,
+      "category": "ELECTRICIDAD",
+      "images": [
+        "https://media.falabella.com/sodimacPE/360945_01/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_hm5eb",
+      "name": "CAJA RECTANGULAR - PAVCO",
+      "description": "Caja eléctrica PAVCO de diseño octagonal, práctica para organizar y proteger conexiones en instalaciones eléctricas.",
+      "price": 1,
+      "category": "ELECTRICIDAD",
+      "images": [
+        "https://tse3.mm.bing.net/th/id/OIP.bDuP-kMNWDu8OeyzxlPemgHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_rx7fr",
+      "name": "CURVA SAP 3/4 DE LUZ - PAVCO",
+      "description": "Curva SAP de 3/4\", ideal para realizar giros y cambios de dirección en instalaciones eléctricas.",
+      "price": 1,
+      "category": "ELECTRICIDAD",
+      "images": [
+        "https://media.falabella.com/sodimacPE/199109_01/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_4y5jz",
+      "name": "CURVA SAP 5/8 DE LUZ - PAVCO",
+      "description": "Curva SAP de 5/8\", práctica para facilitar el recorrido de la tubería en canalizaciones eléctricas.",
+      "price": 1,
+      "category": "ELECTRICIDAD",
+      "images": [
+        "https://media.falabella.com/sodimacPE/199109_01/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_jkj1u",
+      "name": "CURVA SAP 1\" DE LUZ - PAVCO",
+      "description": "Curva SAP de 1\", diseñada para conectar tramos y adaptar la dirección de la instalación.",
+      "price": 1,
+      "category": "ELECTRICIDAD",
+      "images": [
+        "https://media.falabella.com/sodimacPE/199109_01/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_bvby8",
+      "name": "CURVA SAP 1/2 DE LUZ - PAVCO",
+      "description": "Curva SAP de 1/2\", útil para realizar cambios de dirección de manera sencilla y ordenada.",
+      "price": 1,
+      "category": "ELECTRICIDAD",
+      "images": [
+        "https://media.falabella.com/sodimacPE/199109_01/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_fbhc3",
+      "name": "VARILLA DE 1/2 - ACEROS AREQUIPA",
+      "description": "Varilla de acero de 1/2\" x 9 metros, ideal para trabajos de construcción y refuerzo estructural.",
+      "price": 1,
+      "category": "CONSTRUCCION",
+      "images": [
+        "https://centrohierros.com/wp-content/uploads/2020/07/Varilla-corrugada-arequipa.jpg"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_2b8hi",
+      "name": "VARILLA DE 1/4 - ACEROS AREQUIPA",
+      "description": "Varilla de acero de 1/4\" x 9 metros, práctica para estructuras y trabajos de concreto armado.",
+      "price": 1,
+      "category": "CONSTRUCCION",
+      "images": [
+        "https://centrohierros.com/wp-content/uploads/2020/07/Varilla-corrugada-arequipa.jpg"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_initw",
+      "name": "VARILLA DE 5/8 - ACEROS AREQUIPA",
+      "description": "Varilla de acero de 5/8\" x 9 metros, recomendada para proyectos que requieren mayor resistencia estructural.",
+      "price": 1,
+      "category": "CONSTRUCCION",
+      "images": [
+        "https://centrohierros.com/wp-content/uploads/2020/07/Varilla-corrugada-arequipa.jpg"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_4vabn",
+      "name": "VARILLA DE 3/8 - ACEROS AREQUIPA",
+      "description": "Varilla de acero de 3/8\" x 9 metros, adecuada para refuerzos y diferentes trabajos de construcción.",
+      "price": 1,
+      "category": "CONSTRUCCION",
+      "images": [
+        "https://centrohierros.com/wp-content/uploads/2020/07/Varilla-corrugada-arequipa.jpg"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_2ywek",
+      "name": "VARILLA DE 12MM - ACEROS AREQUIPA",
+      "description": "Varilla de acero de 12 mm x 9 metros, diseñada para brindar resistencia y soporte en obras de construcción.",
+      "price": 1,
+      "category": "CONSTRUCCION",
+      "images": [
+        "https://centrohierros.com/wp-content/uploads/2020/07/Varilla-corrugada-arequipa.jpg"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_23qjd",
+      "name": "VARILLA DE 8MM - ACEROS AREQUIPA",
+      "description": "Varilla de acero de 8 mm x 9 metros, ideal para refuerzos y aplicaciones de concreto en proyectos de obra.",
+      "price": 1,
+      "category": "CONSTRUCCION",
+      "images": [
+        "https://centrohierros.com/wp-content/uploads/2020/07/Varilla-corrugada-arequipa.jpg"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_mvhep",
+      "name": "VARILLA DE 1/2 - IMPORTADA",
+      "description": "Varilla de acero de 1/2\" x 9 metros, ideal para refuerzo y trabajos generales de construcci",
+      "price": 1,
+      "category": "CONSTRUCCION",
+      "images": [
+        "https://chapastito.com.uy/wp-content/uploads/2023/06/IMG-20230616-WA0064-600x495.jpg"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_wdz9w",
+      "name": "VARILLA DE 1/4 - IMPORTADA",
+      "description": "Varilla de acero de 1/4\" x 9 metros, práctica para estructuras y refuerzos en obras.",
+      "price": 1,
+      "category": "CONSTRUCCION",
+      "images": [
+        "https://chapastito.com.uy/wp-content/uploads/2023/06/IMG-20230616-WA0064-600x495.jpg"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_6z9yg",
+      "name": "VARILLA DE 5/8 - IMPORTADA",
+      "description": "Varilla de acero de 5/8\" x 9 metros, recomendada para trabajos que requieren mayor resistencia.",
+      "price": 1,
+      "category": "CONSTRUCCION",
+      "images": [
+        "https://chapastito.com.uy/wp-content/uploads/2023/06/IMG-20230616-WA0064-600x495.jpg"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_21ama",
+      "name": "VARILLA DE 3/8 - IMPORTADA",
+      "description": "Varilla de acero de 3/8\" x 9 metros, adecuada para refuerzos y estructuras de concreto.",
+      "price": 1,
+      "category": "CONSTRUCCION",
+      "images": [
+        "https://chapastito.com.uy/wp-content/uploads/2023/06/IMG-20230616-WA0064-600x495.jpg"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_324d4",
+      "name": "VARILLA DE 12MM - IMPORTADA",
+      "description": "Varilla de acero de 12 mm x 9 metros, ideal para diferentes aplicaciones de construcción y refuerzo.",
+      "price": 1,
+      "category": "CONSTRUCCION",
+      "images": [
+        "https://chapastito.com.uy/wp-content/uploads/2023/06/IMG-20230616-WA0064-600x495.jpg"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_7a36p",
+      "name": "VARILLA DE 8MM - IMPORTADA",
+      "description": "Varilla de acero de 8 mm x 9 metros, útil para refuerzos y trabajos de concreto en obra.",
+      "price": 1,
+      "category": "CONSTRUCCION",
+      "images": [
+        "https://chapastito.com.uy/wp-content/uploads/2023/06/IMG-20230616-WA0064-600x495.jpg"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_ugaju",
+      "name": "ALAMBRE N16 X KG",
+      "description": "Alambre de acero N°16 por kilogramo, ideal para amarres, fijaciones y trabajos generales de construcción.",
+      "price": 1,
+      "category": "CONSTRUCCION",
+      "images": [
+        "https://d34fyu2ua7aizz.cloudfront.net/images/product/25/large/ts_image_5e7934679665b9_68336384.png"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_lpecc",
+      "name": "ALAMBRE N8 X KG",
+      "description": "Alambre de acero N°8 por kilogramo, recomendado para amarres y aplicaciones que requieren mayor resistencia.",
+      "price": 1,
+      "category": "CONSTRUCCION",
+      "images": [
+        "https://th.bing.com/th/id/R.c2a670f4cc24852accfca9cedd9389d3?rik=lSljOHQpfqARfg&pid=ImgRaw&r=0",
+        "https://i0.wp.com/grupocasalima.com/wp-content/uploads/clavo-madera-casa-lima-portada-1.jpg?resize=900%2C635&ssl=1"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_ez7a3",
+      "name": "CLAVO DE 2\" X KG",
+      "description": "Clavo de 2 pulgadas por kilogramo, ideal para fijaciones y trabajos generales de construcción.",
+      "price": 1,
+      "category": "CONSTRUCCION",
+      "images": [
+        "https://media.falabella.com/sodimacPE/120359_01/w=1200,h=1200,fit=pad",
+        "https://i0.wp.com/grupocasalima.com/wp-content/uploads/clavo-madera-casa-lima-portada-1.jpg?resize=900%2C635&ssl=1"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_2682r",
+      "name": "CLAVO DE 1\" X KG",
+      "description": "Clavo de 1 pulgada por kilogramo, práctico para trabajos de carpintería y fijaciones ligeras.",
+      "price": 1,
+      "category": "CONSTRUCCION",
+      "images": [
+        "https://media.falabella.com/sodimacPE/120359_01/w=1200,h=1200,fit=pad",
+        "https://i0.wp.com/grupocasalima.com/wp-content/uploads/clavo-madera-casa-lima-portada-1.jpg?resize=900%2C635&ssl=1"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_ub9mv",
+      "name": "CLAVO DE 3\" X KG",
+      "description": "Clavo de 3 pulgadas por kilogramo, recomendado para fijaciones firmes en diferentes trabajos de obra.",
+      "price": 1,
+      "category": "CONSTRUCCION",
+      "images": [
+        "https://media.falabella.com/sodimacPE/120359_01/w=1200,h=1200,fit=pad",
+        "https://i0.wp.com/grupocasalima.com/wp-content/uploads/clavo-madera-casa-lima-portada-1.jpg?resize=900%2C635&ssl=1"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_xf3bj",
+      "name": "CLAVO DE 4\" X KG",
+      "description": "Clavo de 4 pulgadas por kilogramo, adecuado para trabajos que requieren mayor profundidad y sujeción.",
+      "price": 1,
+      "category": "CONSTRUCCION",
+      "images": [
+        "https://media.falabella.com/sodimacPE/120359_01/w=1200,h=1200,fit=pad",
+        "https://i0.wp.com/grupocasalima.com/wp-content/uploads/clavo-madera-casa-lima-portada-1.jpg?resize=900%2C635&ssl=1"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_gtps9",
+      "name": "PLANCHA TECNOPOR DE 1/2",
+      "description": "Plancha de tecnopor de 1/2\" de espesor, 1.20 m de ancho x 2.40 m de largo, ideal para construcción y aislamiento.",
+      "price": 1,
+      "category": "CONSTRUCCION",
+      "images": [
+        "https://etsaperu.com.pe/tienda-virtual/wp-content/uploads/2020/05/PLANCHA1-768x683.png"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_w2ird",
+      "name": "PLANCHA TECNOPOR DE 3/4",
+      "description": "Plancha de tecnopor de 3/4\" de espesor, 1.20 m de ancho x 2.40 m de largo, práctica para trabajos de construcción.",
+      "price": 1,
+      "category": "CONSTRUCCION",
+      "images": [
+        "https://etsaperu.com.pe/tienda-virtual/wp-content/uploads/2020/05/PLANCHA1-768x683.png"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_mpy52",
+      "name": "PLANCHA TECNOPOR DE 1\"",
+      "description": "Plancha de tecnopor de 1\" de espesor, 1.20 m de ancho x 2.40 m de largo, recomendada para aislamiento y diferentes aplicaciones en obra.",
+      "price": 1,
+      "category": "CONSTRUCCION",
+      "images": [
+        "https://etsaperu.com.pe/tienda-virtual/wp-content/uploads/2020/05/PLANCHA1-768x683.png"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_5uu9f",
+      "name": "PLANCHA TECNOPOR DE 2\"",
+      "description": "Plancha de tecnopor de 2\" de espesor, 1.20 m de ancho x 2.40 m de largo, ideal para proyectos que requieren mayor aislamiento.",
+      "price": 1,
+      "category": "CONSTRUCCION",
+      "images": [
+        "https://etsaperu.com.pe/tienda-virtual/wp-content/uploads/2020/05/PLANCHA1-768x683.png"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_8eee0",
+      "name": "TECNOPOR TECHO 15",
+      "description": "Tecnopor para techo de 15 mm de espesor, con dimensiones de 1.20 m de ancho x 2.40 m de largo, ideal para trabajos de construcción.",
+      "price": 1,
+      "category": "CONSTRUCCION",
+      "images": [
+        "https://emcotec.pe/images/blog/ladrillos-de-tecnopor.jpg"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_gpors",
+      "name": "TECNOPOR TECHO 12",
+      "description": "Tecnopor para techo de 12 mm de espesor, con dimensiones de 1.20 m de ancho x 2.40 m de largo, práctico para diferentes aplicaciones en obra.",
+      "price": 1,
+      "category": "CONSTRUCCION",
+      "images": [
+        "https://emcotec.pe/images/blog/ladrillos-de-tecnopor.jpg"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_f9juj",
+      "name": "BOLSA DE CEMENTO APU X 42.5",
+      "description": "Cemento APU en bolsa de 42.5 kg, ideal para obras de construcción y trabajos de concreto en general.",
+      "price": 1,
+      "category": "CONSTRUCCION",
+      "images": [
+        "https://th.bing.com/th/id/R.54e7b0374217939b5ea4274306b4f80e?rik=%2fbMHUXNg%2fQZ8ug&pid=ImgRaw&r=0",
+        "https://tse3.mm.bing.net/th/id/OIP.H0LIvCA8Bje-z6Ayvm9_sQHaE8?r=0&w=1240&h=828&rs=1&pid=ImgDetMain&o=7&rm=3"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_bx6i6",
+      "name": "BOLSA DE CEMENTO SOL X 42.5",
+      "description": "Cemento Sol Tipo I en bolsa de 42.5 kg, recomendado para construcciones generales y estructuras de concreto.",
+      "price": 1,
+      "category": "CONSTRUCCION",
+      "images": [
+        "https://promart.vteximg.com.br/arquivos/ids/1794569-1000-1000/22662.jpg?v=637654123753470000"
+      ]
+    },
+    {
+      "id": "p_mtejm7v9_52zfz",
+      "name": "BOLSA DE CEMENTO ANDINO HS X 42.5",
+      "description": "Cemento Andino Ultra HS en bolsa de 42.5 kg, ideal para obras que requieren resistencia al salitre, humedad y sulfatos.",
+      "price": 1,
+      "category": "CONSTRUCCION",
+      "images": [
+        "https://tse3.mm.bing.net/th/id/OIP.beOrhKfB-1Q_HdMPkbJQ9QHaGz?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
       ]
     }
   ],
