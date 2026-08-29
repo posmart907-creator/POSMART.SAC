@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;900&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <style>
   :root{
     --charcoal:#1F2933;
@@ -818,15 +819,26 @@ function renderAdminProducts(){
     '</tr>';
   }).join('');
   main.innerHTML =
-    '<div style="display:flex;justify-content:space-between;align-items:center;">' +
+    '<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;">' +
       '<div><h2>Productos</h2><p class="admin-sub">' + DATA.products.length + ' producto(s) en el catálogo</p></div>' +
-      '<button class="add-new-btn" id="newProductBtn">+ Nuevo producto</button>' +
+      '<div style="display:flex;gap:8px;flex-wrap:wrap;">' +
+        '<button class="btn-secondary" id="importExcelBtn" style="padding:9px 16px;font-size:13px;">📥 Importar desde Excel</button>' +
+        '<input type="file" id="importExcelFile" accept=".xlsx,.xls,.csv" style="display:none;">' +
+        '<button class="add-new-btn" id="newProductBtn">+ Nuevo producto</button>' +
+      '</div>' +
     '</div>' +
     (DATA.products.length === 0
-      ? '<div class="empty-state"><div class="display" style="font-size:18px;">Aún no subes productos</div><p>Usa "Nuevo producto" para comenzar a armar tu catálogo.</p></div>'
+      ? '<div class="empty-state"><div class="display" style="font-size:18px;">Aún no subes productos</div><p>Usa "Nuevo producto" para comenzar a armar tu catálogo, o importa varios de una vez con "Importar desde Excel".</p></div>'
       : '<table class="admin-table"><thead><tr><th></th><th>Nombre</th><th>Categoría</th><th>Precio</th><th></th></tr></thead><tbody>' + rows + '</tbody></table>');
 
   document.getElementById('newProductBtn').addEventListener('click', function(){ renderProductForm(null); });
+  document.getElementById('importExcelBtn').addEventListener('click', function(){ document.getElementById('importExcelFile').click(); });
+  document.getElementById('importExcelFile').addEventListener('change', function(e){
+    var file = e.target.files[0];
+    if(!file) return;
+    importProductsFromExcel(file);
+    e.target.value = '';
+  });
   main.querySelectorAll('[data-edit]').forEach(function(btn){ btn.addEventListener('click', function(){ renderProductForm(btn.getAttribute('data-edit')); }); });
   main.querySelectorAll('[data-del]').forEach(function(btn){
     btn.addEventListener('click', function(){
@@ -921,6 +933,64 @@ function renderProductForm(id){
     renderGrid();
     showToast('Producto guardado (recuerda descargar y publicar)');
   });
+}
+
+/* ---- IMPORTAR PRODUCTOS DESDE EXCEL/CSV ---- */
+function importProductsFromExcel(file){
+  if(typeof XLSX === 'undefined'){ showToast('No se pudo cargar el lector de Excel. Revisa tu conexión a internet e intenta de nuevo.'); return; }
+  var reader = new FileReader();
+  reader.onerror = function(){ showToast('No se pudo leer el archivo'); };
+  reader.onload = function(e){
+    try{
+      var data = new Uint8Array(e.target.result);
+      var workbook = XLSX.read(data, { type:'array' });
+      var sheetName = workbook.SheetNames.indexOf('Productos') !== -1 ? 'Productos' : workbook.SheetNames[0];
+      var sheet = workbook.Sheets[sheetName];
+      var rows = XLSX.utils.sheet_to_json(sheet, { defval:'' });
+
+      var added = 0, skipped = 0, newCats = [];
+      rows.forEach(function(row){
+        var name = String(row.nombre || row.Nombre || '').trim();
+        if(!name) { skipped++; return; }
+        var description = String(row.descripcion || row.Descripcion || row['descripción'] || '').trim();
+        var price = parseFloat(row.precio || row.Precio || 0);
+        if(isNaN(price)) price = 0;
+        var category = String(row.categoria || row.Categoria || row['categoría'] || '').trim();
+        var images = [row.imagen1 || row.Imagen1, row.imagen2 || row.Imagen2, row.imagen3 || row.Imagen3]
+          .map(function(v){ return String(v||'').trim(); })
+          .filter(function(v){ return v; });
+
+        if(category && DATA.categories.indexOf(category) === -1){
+          DATA.categories.push(category);
+          newCats.push(category);
+        }
+
+        DATA.products.push({
+          id: uid('p'),
+          name: name,
+          description: description,
+          price: price,
+          category: category,
+          images: images
+        });
+        added++;
+      });
+
+      if(added > 0){
+        persistDraft();
+        renderAdminProducts();
+        renderCategoryChips();
+        renderGrid();
+      }
+      var msg = added + ' producto(s) importado(s)';
+      if(skipped > 0) msg += ', ' + skipped + ' fila(s) vacía(s) omitida(s)';
+      if(newCats.length > 0) msg += '. Categorías nuevas creadas: ' + newCats.join(', ');
+      showToast(msg + '. Recuerda descargar y publicar.');
+    }catch(err){
+      showToast('El archivo no se pudo leer. Revisa que sea el formato de la plantilla.');
+    }
+  };
+  reader.readAsArrayBuffer(file);
 }
 
 function compressImageFile(file, maxWidth, quality){
