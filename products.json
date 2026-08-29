@@ -5,9 +5,6 @@
     "logoImage": "./logo.png",
     "whatsapp": "51933482945",
     "currency": "S/",
-    "footerBannerImage": "",
-    "footerBannerText": "",
-    "footerBannerActive": false,
     "bannerSlides": [
       {
         "id": "slide_fachada",
@@ -21,7 +18,10 @@
         "text": "",
         "active": true
       }
-    ]
+    ],
+    "footerBannerImage": "",
+    "footerBannerText": "",
+    "footerBannerActive": false
   },
   "categories": [
     "Herramientas Eléctricas",
@@ -91,7 +91,7 @@
       "id": "p_5",
       "name": "Cable THW 12 AWG (rollo 100m)",
       "description": "Cable de cobre para instalaciones eléctricas residenciales, aislamiento THW 600V.",
-      "price": 189.0,
+      "price": 189,
       "category": "Electricidad",
       "images": [
         "https://placehold.co/500x500/1F2933/FFC845?text=Cable"
@@ -101,7 +101,7 @@
       "id": "p_6",
       "name": "Pintura Látex Blanco 1 Galón",
       "description": "Pintura lavable de alto rendimiento, acabado mate, cubre hasta 40m2 por galón.",
-      "price": 65.0,
+      "price": 65,
       "category": "Pinturas",
       "images": [
         "https://placehold.co/500x500/1F2933/FFC845?text=Pintura"
