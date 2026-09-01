@@ -32,7 +32,8 @@
     "Pinturas",
     "Ferretería General",
     "ELECTRICIDAD",
-    "CONSTRUCCION"
+    "CONSTRUCCION",
+    "TANQUES"
   ],
   "promos": [
     {
@@ -49,66 +50,6 @@
     }
   ],
   "products": [
-    {
-      "id": "p_1",
-      "name": "Taladro Percutor 1/2\"",
-      "description": "Taladro percutor de 750W, mandril de 13mm, incluye maletín y broca de prueba. Ideal para concreto, madera y metal.",
-      "price": 249.9,
-      "category": "Herramientas Eléctricas",
-      "images": [
-        "https://placehold.co/500x500/1F2933/FFC845?text=Taladro"
-      ]
-    },
-    {
-      "id": "p_2",
-      "name": "Martillo de Uña 16oz",
-      "description": "Mango de fibra de vidrio antideslizante, cabeza forjada en acero al carbono. Resistente y balanceado.",
-      "price": 29.9,
-      "category": "Herramientas Manuales",
-      "images": [
-        "https://placehold.co/500x500/1F2933/FFC845?text=Martillo"
-      ]
-    },
-    {
-      "id": "p_3",
-      "name": "Cemento Portland 42.5kg",
-      "description": "Saco de cemento tipo I, ideal para estructuras, columnas y trabajos de albañilería en general.",
-      "price": 28.5,
-      "category": "Construcción",
-      "images": [
-        "https://placehold.co/500x500/1F2933/FFC845?text=Cemento"
-      ]
-    },
-    {
-      "id": "p_4",
-      "name": "Tubo PVC 1/2\" x 5m",
-      "description": "Tubo PVC para agua fría, presión de trabajo estándar, roscable en ambos extremos.",
-      "price": 12.9,
-      "category": "Plomería",
-      "images": [
-        "https://placehold.co/500x500/1F2933/FFC845?text=Tubo+PVC"
-      ]
-    },
-    {
-      "id": "p_5",
-      "name": "Cable THW 12 AWG (rollo 100m)",
-      "description": "Cable de cobre para instalaciones eléctricas residenciales, aislamiento THW 600V.",
-      "price": 189,
-      "category": "Electricidad",
-      "images": [
-        "https://placehold.co/500x500/1F2933/FFC845?text=Cable"
-      ]
-    },
-    {
-      "id": "p_6",
-      "name": "Pintura Látex Blanco 1 Galón",
-      "description": "Pintura lavable de alto rendimiento, acabado mate, cubre hasta 40m2 por galón.",
-      "price": 65,
-      "category": "Pinturas",
-      "images": [
-        "https://placehold.co/500x500/1F2933/FFC845?text=Pintura"
-      ]
-    },
     {
       "id": "p_mtejm7v8_vtp3e",
       "name": "TUBO SEL 3/4 DE LUZ - PAVCO",
@@ -563,6 +504,96 @@
       "category": "CONSTRUCCION",
       "images": [
         "https://tse3.mm.bing.net/th/id/OIP.beOrhKfB-1Q_HdMPkbJQ9QHaGz?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+      ]
+    },
+    {
+      "id": "p_mtix3kfh_a1jim",
+      "name": "TANQUE ARENA PLUS 1100 LT ROTOPLAST",
+      "description": "Tanque Rotoplas Plus de 1,100 litros, ideal para almacenar agua de forma segura y práctica en el hogar.",
+      "price": 885,
+      "category": "TANQUES",
+      "images": [
+        "https://promart.vteximg.com.br/arquivos/ids/7089905-1000-1000/23042_1.jpg?v=638210490434000000"
+      ]
+    },
+    {
+      "id": "p_mtix3kfh_oky9o",
+      "name": "TANQUE NEGRO PLUS 1100LT ROTOPLAST",
+      "description": "Tanque Rotoplas Plus negro de 1,100 litros, diseñado para almacenamiento de agua y uso residencial",
+      "price": 685,
+      "category": "TANQUES",
+      "images": [
+        "https://promart.vteximg.com.br/arquivos/ids/9375898/68599.jpg?v=638941696304130000"
+      ]
+    },
+    {
+      "id": "p_mtix3kfh_ynxp5",
+      "name": "TANQUE CISTERNA 2800LT ROTOPLAST",
+      "description": "Cisterna Rotoplas de 2,800 litros, recomendada para almacenar una mayor cantidad de agua de manera segura.",
+      "price": 2898,
+      "category": "TANQUES",
+      "images": [
+        "https://tse4.mm.bing.net/th/id/OIP.tJrVbJyhBK6R6WONSukApAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+      ]
+    },
+    {
+      "id": "p_mtix3kfh_lfhpp",
+      "name": "TANQUE ARENA PLUS 700LT ROTOPLAST",
+      "description": "Tanque Rotoplas Plus de 700 litros, práctico para almacenar agua en viviendas y diferentes instalaciones.",
+      "price": 720,
+      "category": "TANQUES",
+      "images": [
+        "https://tse4.mm.bing.net/th/id/OIP.Y4VzePeBshGxFhsi7hriAAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+      ]
+    },
+    {
+      "id": "p_mtix3kfi_q420q",
+      "name": "TANQUE ARENA PLUS 2500LT ROTOPLAST",
+      "description": "Tanque Rotoplas Plus de 2,500 litros, ideal para proyectos que requieren una mayor capacidad de almacenamiento.",
+      "price": 1598,
+      "category": "TANQUES",
+      "images": [
+        "https://tse2.mm.bing.net/th/id/OIP.OarC47-TncPQu9P2DBIa5wHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+      ]
+    },
+    {
+      "id": "p_mtix3kfi_5dpgn",
+      "name": "TANQUE NEGRO PLUS 2500LT ROTOPLAST",
+      "description": "Tanque Rotoplas Plus negro de 2,500 litros, pensado para un almacenamiento amplio y confiable de agua.",
+      "price": 1345,
+      "category": "TANQUES",
+      "images": [
+        "https://tse2.mm.bing.net/th/id/OIP.NuTsBsgavPbZOfdjoiUrIgHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+      ]
+    },
+    {
+      "id": "p_mtix3kfi_0lm29",
+      "name": "TANQUE ARENA PLUS 1500 LT ROTOPLAST",
+      "description": "Tanque Rotoplas Plus de 1,500 litros, adecuado para viviendas que necesitan mayor reserva de agua.",
+      "price": 1225,
+      "category": "TANQUES",
+      "images": [
+        "https://promart.vteximg.com.br/arquivos/ids/9375927-1000-1000/128778.jpg?v=638941699600230000"
+      ]
+    },
+    {
+      "id": "p_mtix3kfi_b67sr",
+      "name": "TANQUE CISTERNA 1200LT ROTOPLAST",
+      "description": "Cisterna Rotoplas de 1,200 litros, ideal para almacenamiento de agua y abastecimiento en el hogar.",
+      "price": 1325,
+      "category": "TANQUES",
+      "images": [
+        "https://tse4.mm.bing.net/th/id/OIP.LCLVCsi3KX4Dr4YhR90_oAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+      ]
+    },
+    {
+      "id": "p_mtix3kfi_6joax",
+      "name": "TANQUE AZUL RESISTEC 600LT ROTOPLAST",
+      "description": "Tanque Rotoplas Resistec de 600 litros, una opción práctica para almacenar agua en espacios residenciales.",
+      "price": 680,
+      "category": "TANQUES",
+      "images": [
+        "https://tse2.mm.bing.net/th/id/OIP.bHex5hlXLXCC0YSwaufHiwHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
       ]
     }
   ],
