@@ -33,7 +33,8 @@
     "Ferretería General",
     "ELECTRICIDAD",
     "CONSTRUCCION",
-    "TANQUES"
+    "TANQUES",
+    "PLOMERIA"
   ],
   "promos": [
     {
@@ -594,6 +595,690 @@
       "category": "TANQUES",
       "images": [
         "https://tse2.mm.bing.net/th/id/OIP.bHex5hlXLXCC0YSwaufHiwHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_c84kl",
+      "name": "CODO SP DE AGUA 1/2 X 45 - PAVCO",
+      "description": "Codo PAVCO SP de 1/2\" x 45°, ideal para realizar cambios de dirección en tuberías de agua de forma práctica y segura.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/308943_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_s92sc",
+      "name": "CODO SP DE AGUA 1/2 X 90 - PAVCO",
+      "description": "Codo PAVCO SP de 1/2\" x 90°, diseñado para facilitar giros en instalaciones de agua y lograr un recorrido ordenado.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/308986_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_p4xy5",
+      "name": "CODO SP DE AGUA 1 X 45 - PAVCO",
+      "description": "Codo PAVCO SP de 1\" x 45°, recomendado para adaptar el recorrido de tuberías de agua con un cambio de dirección gradual.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/308935_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_omo1e",
+      "name": "CODO SP DE AGUA 1 X 90 - PAVCO",
+      "description": "Codo PAVCO SP de 1\" x 90°, una solución práctica para realizar giros en sistemas de conducción de agua.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/308978_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_bpyiy",
+      "name": "CODO SP DE DESAGUE 2 X 45 - PAVCO",
+      "description": "Codo PAVCO SP de desagüe 2\" x 45°, ideal para orientar el recorrido de tuberías y facilitar una adecuada evacuación.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/344877_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_krbhw",
+      "name": "CODO SP DE DESAGUE 2 X 90 - PAVCO",
+      "description": "Codo PAVCO SP de desagüe 2\" x 90°, diseñado para realizar cambios de dirección en sistemas de desagüe.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/344923_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_d9z6y",
+      "name": "CODO SP DE DESAGUE 3 X 45 - PAVCO",
+      "description": "Codo PAVCO SP de desagüe 3\" x 45°, práctico para modificar el recorrido de la tubería de manera eficiente.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/344885_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_fyo33",
+      "name": "CODO SP DE DESAGUE 3 X 90 - PAVCO",
+      "description": "Codo PAVCO SP de desagüe 3\" x 90°, recomendado para giros definidos en instalaciones de evacuación de agua.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/344931_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_rnpcq",
+      "name": "CODO SP DE DESAGUE 4 X 45 - PAVCO",
+      "description": "Codo PAVCO SP de desagüe 4\" x 45°, ideal para realizar cambios de dirección suaves en tuberías de mayor diámetro.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/344893_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_udzwr",
+      "name": "CODO SP DE DESAGUE 4 X 90 - PAVCO",
+      "description": "Codo PAVCO SP de desagüe 4\" x 90°, facilita los cambios de dirección en sistemas de desagüe de mayor capacidad.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/34494X_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_haux3",
+      "name": "CODO SP DE AGUA 3/4 X 45 - PAVCO",
+      "description": "Codo PAVCO SP de 3/4\" x 45°, ideal para conectar tuberías y realizar cambios de dirección en instalaciones de agua.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/308951_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_et70n",
+      "name": "CODO SP DE AGUA 3/4 X 90 - PAVCO",
+      "description": "Codo PAVCO SP de 3/4\" x 90°, práctico para adaptar el recorrido de las tuberías en instalaciones de agua.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/308994_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_m3wh0",
+      "name": "CODO C/R DE AGUA 1/2 X 45 - PAVCO",
+      "description": "Codo PAVCO con rosca de 1/2\" x 45°, ideal para conexiones de agua que requieren un cambio de dirección y unión roscada.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_lpmbc",
+      "name": "CODO C/R DE AGUA 1/2 X 90 - PAVCO",
+      "description": "Codo PAVCO con rosca de 1/2\" x 90°, facilita la conexión de tuberías con un giro de 90° en instalaciones de agua.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/309419_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_3q91x",
+      "name": "CODO C/R DE AGUA 3/4 X 45 - PAVCO",
+      "description": "Codo PAVCO con rosca de 3/4\" x 45°, recomendado para realizar conexiones y cambios de dirección en tuberías de agua.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_pifvs",
+      "name": "CODO C/R DE AGUA 3/4 X 90 - PAVCO",
+      "description": "Codo PAVCO con rosca de 3/4\" x 90°, práctico para unir tuberías y realizar giros en sistemas de agua.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/309419_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_1cg0j",
+      "name": "UNION C/R DE AGUA 1/2 - PAVCO",
+      "description": "Unión PAVCO con rosca de 1/2\", diseñada para conectar tuberías de agua y facilitar el montaje de la instalación.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/309737_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_qo1ub",
+      "name": "TEE C/R DE AGUA 1/2 - PAVCO",
+      "description": "Tee PAVCO con rosca de 1/2\", permite realizar derivaciones y distribuir el agua hacia diferentes puntos.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://th.bing.com/th/id/R.7cd3a6c0d426ef99942cb830ae31a3ad?rik=tzRsXEhVQ4efPQ&riu=http%3a%2f%2fwww.ferropolis.pe%2fcdn%2fshop%2fproducts%2f170704-tee-pvc-p-cr-34.webp%3fv%3d1675619344&ehk=l1ZgF%2bvYlNsXIBIQkK9bGo2tVTdOI9ZYHPnCG5ODYhw%3d&risl=&pid=ImgRaw&r=0",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_kggo9",
+      "name": "TEE C/R DE AGUA 3/4 - PAVCO",
+      "description": "Tee PAVCO con rosca de 3/4\", ideal para crear derivaciones en instalaciones de conducción de agua.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://th.bing.com/th/id/R.7cd3a6c0d426ef99942cb830ae31a3ad?rik=tzRsXEhVQ4efPQ&riu=http%3a%2f%2fwww.ferropolis.pe%2fcdn%2fshop%2fproducts%2f170704-tee-pvc-p-cr-34.webp%3fv%3d1675619344&ehk=l1ZgF%2bvYlNsXIBIQkK9bGo2tVTdOI9ZYHPnCG5ODYhw%3d&risl=&pid=ImgRaw&r=0",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_qhgma",
+      "name": "TEE C/R DE AGUA 1 - PAVCO",
+      "description": "Tee PAVCO con rosca de 1\", práctica para distribuir el flujo de agua y conectar diferentes recorridos.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://th.bing.com/th/id/R.7cd3a6c0d426ef99942cb830ae31a3ad?rik=tzRsXEhVQ4efPQ&riu=http%3a%2f%2fwww.ferropolis.pe%2fcdn%2fshop%2fproducts%2f170704-tee-pvc-p-cr-34.webp%3fv%3d1675619344&ehk=l1ZgF%2bvYlNsXIBIQkK9bGo2tVTdOI9ZYHPnCG5ODYhw%3d&risl=&pid=ImgRaw&r=0",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_ym2a0",
+      "name": "TEE SP DE AGUA 1/2 - PAVCO",
+      "description": "Tee PAVCO SP de 1/2\", ideal para realizar derivaciones y organizar el recorrido de las tuberías de agua.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://tse4.mm.bing.net/th/id/OIP.bjoBm5LulW1vlTrKz_uNcAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_bj9ib",
+      "name": "TEE SP DE AGUA 3/4 - PAVCO",
+      "description": "Tee PAVCO SP de 3/4\", permite dividir el recorrido de la tubería para conectar diferentes puntos de la instalación.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://tse4.mm.bing.net/th/id/OIP.bjoBm5LulW1vlTrKz_uNcAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_csnhq",
+      "name": "TEE SP DE AGUA 5/8 - PAVCO",
+      "description": "Tee PAVCO SP de 5/8\", adecuada para realizar conexiones y derivaciones en sistemas de agua.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://tse4.mm.bing.net/th/id/OIP.bjoBm5LulW1vlTrKz_uNcAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_h704w",
+      "name": "TEE SP DE AGUA 1 - PAVCO",
+      "description": "Tee PAVCO SP de 1\", recomendada para distribuir el agua mediante diferentes ramificaciones de tubería.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://tse4.mm.bing.net/th/id/OIP.bjoBm5LulW1vlTrKz_uNcAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_50w6x",
+      "name": "UNION UNIVERSAL C/R DE 1/2 - PAVCO",
+      "description": "Unión universal PAVCO con rosca de 1/2\", facilita la unión y posterior desmontaje de tuberías para instalación o mantenimiento.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/396397_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_5pu29",
+      "name": "UNION UNIVERSAL C/R DE 3/4 - PAVCO",
+      "description": "Unión universal PAVCO con rosca de 3/4\", práctica para conectar tuberías y facilitar futuras labores de mantenimiento.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/396397_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_bbni3",
+      "name": "UNION UNIVERSAL C/R DE 1 - PAVCO",
+      "description": "Unión universal PAVCO con rosca de 1\", ideal para conexiones que requieren facilidad de montaje y desmontaje.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/396397_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_hcfux",
+      "name": "REDUCCION DE 3/4 A 1/2 - PAVCO",
+      "description": "Reducción PAVCO de 3/4\" a 1/2\", permite adaptar tuberías de diferentes diámetros de manera sencilla.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://www.ferropolis.pe/cdn/shop/products/89776_2048x.jpg?v=1642018534",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_376km",
+      "name": "REDUCCION DE 1 A 3/4 - PAVCO",
+      "description": "Reducción PAVCO de 1\" a 3/4\", ideal para conectar tramos de tubería con diferentes medidas",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://mercury.vtexassets.com/arquivos/ids/11663092/89775.jpg?v=638100504263000000",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_t1ymp",
+      "name": "REDUCCION DE 1 A 1/2 - PAVCO",
+      "description": "Reducción PAVCO de 1\" a 1/2\", práctica para disminuir el diámetro y adaptar conexiones en la instalación.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/30915X_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_uqc5f",
+      "name": "REDUCCION DE 1 1/2 A 1/2 - PAVCO",
+      "description": "Reducción PAVCO de 1 1/2\" a 1/2\", diseñada para conectar tuberías de distinto diámetro en una misma instalación.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_140tn",
+      "name": "REDUCCION DE 1 1/4 A 1 - PAVCO",
+      "description": "Reducción PAVCO de 1 1/4\" a 1\", permite realizar una transición práctica entre diferentes medidas de tubería.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_snz21",
+      "name": "REDUCCION DE 1 1/2 A 3/4 - PAVCO",
+      "description": "Reducción PAVCO de 1 1/2\" a 3/4\", ideal para adaptar el diámetro de las tuberías según las necesidades del sistema.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_hnit1",
+      "name": "REDUCCION DE 1 1/2 A 1 1/4 - PAVCO",
+      "description": "Reducción PAVCO de 1 1/2\" a 1 1/4\", recomendada para conectar tuberías de diferentes diámetros de forma práctica.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_t0g04",
+      "name": "TAPOM HEMBRA RI 1/2 - PAVCO",
+      "description": "Tapón hembra PAVCO con rosca interna de 1/2\", ideal para cerrar conexiones y evitar el paso de agua por puntos no utilizados.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://promart.vteximg.com.br/arquivos/ids/10377280-1000-1000/89788_1.jpg?v=639090334176170000",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_3601j",
+      "name": "TAPOM HEMBRA RI 3/4 - PAVCO",
+      "description": "Tapón hembra PAVCO con rosca interna de 3/4\", práctico para sellar salidas y conexiones en instalaciones de agua.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://http2.mlstatic.com/D_NQ_NP_790160-MPE92719115335_092025-O.webp",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_blc52",
+      "name": "TAPOM HEMBRA RI 1 - PAVCO",
+      "description": "Tapón hembra PAVCO con rosca interna de 1\", diseñado para cerrar de manera segura puntos de conexión de la instalación.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://plazavea.vteximg.com.br/arquivos/ids/34102913-1000-1000/89787.jpg?v=639090650965570000",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_o35hs",
+      "name": "TAPON MACHO SP 1 - PAVCO",
+      "description": "Tapón macho PAVCO SP de 1\", ideal para cerrar extremos y conexiones de tuberías de manera práctica.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_km19x",
+      "name": "TAPON MACHO SP 1/2 - PAVCO",
+      "description": "Tapón macho PAVCO SP de 1/2\", adecuado para bloquear conexiones y cerrar puntos de tubería.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_7j0pq",
+      "name": "TAPON MACHO SP 3/4 - PAVCO",
+      "description": "Tapón macho PAVCO SP de 3/4\", práctico para cerrar salidas y extremos de tuberías de agua.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_22q85",
+      "name": "TAPON HEMBRA SP 1/2 - PAVCO",
+      "description": "Tapón hembra PAVCO SP de 1/2\", diseñado para cerrar conexiones y mantener protegidos los puntos de la instalación.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/309206_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_n4gj3",
+      "name": "TAPON HEMBRA SP 3/4 - PAVCO",
+      "description": "Tapón hembra PAVCO SP de 3/4\", ideal para sellar conexiones y cerrar puntos de tubería que no estén en uso.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/309206_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_4uy3b",
+      "name": "TAPON HEMBRA SP 1 - PAVCO",
+      "description": "Tapón hembra PAVCO SP de 1\", recomendado para cerrar conexiones de forma práctica y ordenada.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/309206_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_7mg3r",
+      "name": "TUBO CPVC A/C DE 1/2 - PAVCO",
+      "description": "Tubo PAVCO de CPVC para agua caliente de 1/2\", ideal para instalaciones de conducción de agua a temperaturas elevadas.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/308536_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_1ftkq",
+      "name": "TUBO CPVC A/C DE 3/4- PAVCO",
+      "description": "Tubo PAVCO de CPVC para agua caliente de 3/4\", recomendado para sistemas de distribución de agua caliente.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/308536_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_zpbo8",
+      "name": "TUBO CPVC A/C DE 1 - PAVCO",
+      "description": "Tubo PAVCO de CPVC para agua caliente de 1\", adecuado para instalaciones que necesitan una conducción confiable de agua caliente.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/308536_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_z7zr5",
+      "name": "UNION CPVC A/C DE 1/2 - PAVCO",
+      "description": "Unión PAVCO de CPVC para agua caliente de 1/2\", permite conectar tramos de tubería de manera práctica y segura.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/308692_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_t39cf",
+      "name": "UNION CPVC A/C DE 3/4 - PAVCO",
+      "description": "Unión PAVCO de CPVC para agua caliente de 3/4\", ideal para unir tuberías en sistemas de agua caliente.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/308692_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_adx0v",
+      "name": "UNION CPVC A/C DE 1 - PAVCO",
+      "description": "Unión PAVCO de CPVC para agua caliente de 1\", facilita la conexión de diferentes tramos del sistema.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/308692_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_bof8p",
+      "name": "UNION UNIVERSAL A/C DE 1/2 - PAVCO",
+      "description": "Unión universal PAVCO para agua caliente de 1/2\", facilita el montaje, desmontaje y mantenimiento de la instalación.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/308722_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_pngok",
+      "name": "UNION UNIVERSAL A/C DE 3/4 - PAVCO",
+      "description": "Unión universal PAVCO para agua caliente de 3/4\", práctica para conectar tuberías y facilitar futuras labores de mantenimiento.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/308722_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_1vf0j",
+      "name": "UNION UNIVERSAL A/C DE 1 - PAVCO",
+      "description": "Unión universal PAVCO para agua caliente de 1\", diseñada para facilitar la conexión y desmontaje de tuberías.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/308722_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_qbk7u",
+      "name": "ADAPTADOR M CPVC A/C DE 1/2 - PAVCO",
+      "description": "Adaptador macho PAVCO de CPVC para agua caliente de 1/2\", ideal para realizar conexiones entre tuberías y accesorios.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://orbe.com.pe/wp-content/uploads/2023/04/g4-s2-p7.png",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_mszb6",
+      "name": "ADAPTADOR M CPVC A/C DE 3/4 - PAVCO",
+      "description": "Adaptador macho PAVCO de CPVC para agua caliente de 3/4\", práctico para conectar el sistema con otros accesorios.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://orbe.com.pe/wp-content/uploads/2023/04/g4-s2-p7.png",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_tkuur",
+      "name": "ADAPTADOR M CPVC A/C DE 1 - PAVCO",
+      "description": "Adaptador macho PAVCO de CPVC para agua caliente de 1\", recomendado para realizar conexiones firmes en la instalación.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://orbe.com.pe/wp-content/uploads/2023/04/g4-s2-p7.png",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_asf84",
+      "name": "TAPON CPVC A/C DE 1/2 - PAVCO",
+      "description": "Tapón PAVCO de CPVC para agua caliente de 1/2\", ideal para cerrar y proteger puntos de la instalación.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://tse3.mm.bing.net/th/id/OIP.H5L_2kdjwY8JW6ZTRYmULQHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_3xbtt",
+      "name": "TAPON CPVC A/C DE 3/4 - PAVCO",
+      "description": "Tapón PAVCO de CPVC para agua caliente de 3/4\", práctico para sellar extremos y conexiones del sistema.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://tse3.mm.bing.net/th/id/OIP.H5L_2kdjwY8JW6ZTRYmULQHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_kurxq",
+      "name": "CODO CPVC A/C DE 1/2 X 45 - PAVCO",
+      "description": "Codo PAVCO de CPVC para agua caliente de 1/2\" x 45°, facilita cambios de dirección en la conducción de agua caliente.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/308587_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_biyvo",
+      "name": "CODO CPVC A/C DE 3/4 X 45 - PAVCO",
+      "description": "Codo PAVCO de CPVC para agua caliente de 3/4\" x 45°, ideal para orientar el recorrido de la tubería.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/308595_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_yv50m",
+      "name": "CODO CPVC A/C DE 1/2 X 90 - PAVCO",
+      "description": "Codo PAVCO de CPVC para agua caliente de 1/2\" x 90°, diseñado para realizar giros en sistemas de agua caliente.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/308609_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_6gk8v",
+      "name": "CODO CPVC A/C DE 3/4 X 90 - PAVCO",
+      "description": "Codo PAVCO de CPVC para agua caliente de 3/4\" x 90°, práctico para adaptar la dirección de las tuberías.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/308617_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_1wq5l",
+      "name": "TEE CPVC A/C DE 1/2 - PAVCO",
+      "description": "Tee PAVCO de CPVC para agua caliente de 1/2\", permite realizar derivaciones y distribuir el agua hacia diferentes puntos.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/30865X_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
+      ]
+    },
+    {
+      "id": "p_mtk8iusy_d0uk8",
+      "name": "TEE CPVC A/C DE 3/4 - PAVCO",
+      "description": "Tee PAVCO de CPVC para agua caliente de 3/4\", ideal para crear ramificaciones en sistemas de conducción de agua caliente.",
+      "price": 1,
+      "category": "PLOMERIA",
+      "images": [
+        "https://media.falabella.com/sodimacPE/30865X_01/w=1200,h=1200,fit=pad",
+        "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
       ]
     }
   ],
