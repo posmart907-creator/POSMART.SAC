@@ -76,6 +76,31 @@
   .footer-banner img{width:100%;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.18);display:block;}
   .footer-banner .fb-caption{margin-top:10px;font-size:13px;color:var(--muted);font-weight:600;}
 
+  /* ---- BARRA DE CONFIANZA ---- */
+  .trust-bar{background:#fff;border-bottom:1px solid var(--border);}
+  .trust-inner{max-width:1200px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;}
+  .trust-item{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;color:var(--charcoal);white-space:nowrap;}
+  .trust-item .ic{font-size:16px;}
+
+  /* ---- CATEGORÍAS DESTACADAS (tarjetas) ---- */
+  .cat-tiles-section{max-width:1200px;margin:0 auto;padding:22px 20px 4px;}
+  .cat-tiles-section h2{font-size:22px;margin:0 0 14px;}
+  .cat-tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px;}
+  .cat-tile{background:#fff;border:1px solid var(--border);border-radius:10px;padding:18px 10px;text-align:center;transition:border-color .15s,transform .15s;}
+  .cat-tile:hover{border-color:var(--orange);transform:translateY(-2px);}
+  .cat-tile .cticon{font-size:28px;margin-bottom:8px;display:block;}
+  .cat-tile .ctname{font-size:12.5px;font-weight:700;color:var(--charcoal);line-height:1.25;}
+  .cat-tile .ctcount{font-size:10.5px;color:var(--muted);margin-top:3px;}
+
+  /* ---- DESTACADOS ---- */
+  .featured-section{max-width:1200px;margin:0 auto;padding:26px 20px 4px;}
+  .featured-section h2{font-size:22px;margin:0 0 4px;}
+  .featured-section .fsub{font-size:13px;color:var(--muted);margin:0 0 14px;}
+
+  .catalog-heading{max-width:1200px;margin:30px auto 0;padding:0 20px;display:flex;align-items:center;gap:14px;}
+  .catalog-heading h2{font-size:22px;margin:0;white-space:nowrap;}
+  .catalog-heading .line{flex:1;height:1px;background:var(--border);}
+
   .filters-bar{max-width:1200px;margin:0 auto;padding:16px 20px 4px;display:flex;gap:8px;flex-wrap:wrap;}
   .chip{background:#fff;border:1px solid var(--border);padding:8px 16px;border-radius:20px;font-size:13px;font-weight:600;color:var(--muted);}
   .chip:hover{border-color:var(--orange);color:var(--charcoal);}
@@ -252,6 +277,21 @@
 
 <div class="banner-carousel" id="bannerCarousel" style="display:none;"></div>
 
+<div class="trust-bar" id="trustBar" style="display:none;"><div class="trust-inner" id="trustInner"></div></div>
+
+<div class="cat-tiles-section" id="catTilesSection" style="display:none;">
+  <h2>Compra por categoría</h2>
+  <div class="cat-tiles" id="catTiles"></div>
+</div>
+
+<div class="featured-section" id="featuredSection" style="display:none;">
+  <h2>Lo más pedido</h2>
+  <p class="fsub">Una selección rápida de nuestros productos más populares</p>
+  <div class="grid" id="featuredGrid"></div>
+</div>
+
+<div class="catalog-heading"><div class="line"></div><h2>Todo el catálogo</h2><div class="line"></div></div>
+
 <div class="filters-bar" id="categoryChips"></div>
 
 <main>
@@ -323,7 +363,14 @@
 (function(){
 
 var DEFAULT_DATA = {
-  settings: { storeName:'Ferretería', logoEmoji:'🔧', logoImage:'', whatsapp:'51999999999', currency:'S/', bannerSlides:[], footerBannerImage:'', footerBannerText:'', footerBannerActive:false },
+  settings: { storeName:'Ferretería', logoEmoji:'🔧', logoImage:'', whatsapp:'51999999999', currency:'S/', bannerSlides:[], footerBannerImage:'', footerBannerText:'', footerBannerActive:false,
+    trustItems: [
+      { icon:'🚚', text:'Envío a todo el distrito' },
+      { icon:'💬', text:'Cotiza por WhatsApp' },
+      { icon:'✅', text:'Precios sin sorpresas' },
+      { icon:'🏪', text:'2 sucursales' }
+    ]
+  },
   branches: [],
   categories: ['Herramientas Eléctricas','Herramientas Manuales','Construcción','Plomería','Electricidad','Pinturas','Ferretería General'],
   promos: [],
@@ -343,6 +390,16 @@ var STATE = {
 };
 
 function uid(prefix){ return prefix + '_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2,7); }
+function normalizeText(s){
+  return String(s||'').trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+}
+function findExistingCategory(name){
+  var norm = normalizeText(name);
+  for(var i=0;i<DATA.categories.length;i++){
+    if(normalizeText(DATA.categories[i]) === norm) return DATA.categories[i];
+  }
+  return null;
+}
 function deepClone(obj){ return JSON.parse(JSON.stringify(obj)); }
 
 /* ---------------- LOAD ---------------- */
@@ -438,6 +495,9 @@ function renderAll(){
   renderBannerCarousel();
   renderFooterBanner();
   renderBranches();
+  renderTrustBar();
+  renderCategoryTiles();
+  renderFeatured();
   renderCategoryChips();
   renderGrid();
   renderCart();
@@ -595,34 +655,27 @@ function getFilteredProducts(){
 }
 
 /* ---------------- RENDER: GRID ---------------- */
-function renderGrid(){
-  var list = getFilteredProducts();
-  document.getElementById('resultsInfo').textContent = list.length + (list.length===1?' producto encontrado':' productos encontrados');
-  var grid = document.getElementById('productGrid');
-  if(list.length === 0){
-    grid.innerHTML = '<div class="empty-state" style="grid-column:1/-1;"><div class="display">Sin resultados</div><p>Prueba con otra palabra o categoría.</p></div>';
-    return;
-  }
-  grid.innerHTML = list.map(function(p){
-    var img = (p.images && p.images[0]) ? '<img src="' + escapeAttr(p.images[0]) + '" alt="' + escapeAttr(p.name) + '" loading="lazy">' : '<div class="noimg">⛭</div>';
-    return '' +
-    '<div class="card" data-id="' + p.id + '">' +
-      '<div class="thumb" data-open="' + p.id + '">' + img + '<span class="cat-tag">' + escapeHtml(p.category||'') + '</span></div>' +
-      '<div class="body">' +
-        '<div class="name" data-open="' + p.id + '">' + escapeHtml(p.name) + '</div>' +
-        '<div class="price-tag">' + fmtPrice(p.price) + '</div>' +
-        '<div class="card-actions">' +
-          '<div class="qty-box" data-qty="1"><button class="qminus">−</button><span>1</span><button class="qplus">+</button></div>' +
-          '<button class="add-btn" data-add="' + p.id + '">Agregar</button>' +
-        '</div>' +
+function buildProductCardHtml(p){
+  var img = (p.images && p.images[0]) ? '<img src="' + escapeAttr(p.images[0]) + '" alt="' + escapeAttr(p.name) + '" loading="lazy">' : '<div class="noimg">⛭</div>';
+  return '' +
+  '<div class="card" data-id="' + p.id + '">' +
+    '<div class="thumb" data-open="' + p.id + '">' + img + '<span class="cat-tag">' + escapeHtml(p.category||'') + '</span></div>' +
+    '<div class="body">' +
+      '<div class="name" data-open="' + p.id + '">' + escapeHtml(p.name) + '</div>' +
+      '<div class="price-tag">' + fmtPrice(p.price) + '</div>' +
+      '<div class="card-actions">' +
+        '<div class="qty-box" data-qty="1"><button class="qminus">−</button><span>1</span><button class="qplus">+</button></div>' +
+        '<button class="add-btn" data-add="' + p.id + '">Agregar</button>' +
       '</div>' +
-    '</div>';
-  }).join('');
+    '</div>' +
+  '</div>';
+}
 
-  grid.querySelectorAll('[data-open]').forEach(function(el){
+function wireProductCards(container){
+  container.querySelectorAll('[data-open]').forEach(function(el){
     el.addEventListener('click', function(){ openProductModal(el.getAttribute('data-open')); });
   });
-  grid.querySelectorAll('.card').forEach(function(card){
+  container.querySelectorAll('.card').forEach(function(card){
     var qtyBox = card.querySelector('.qty-box');
     var qtySpan = qtyBox.querySelector('span');
     card.querySelector('.qminus').addEventListener('click', function(){
@@ -640,6 +693,73 @@ function renderGrid(){
       qtySpan.textContent = '1'; qtyBox.setAttribute('data-qty','1');
     });
   });
+}
+
+function renderGrid(){
+  var list = getFilteredProducts();
+  document.getElementById('resultsInfo').textContent = list.length + (list.length===1?' producto encontrado':' productos encontrados');
+  var grid = document.getElementById('productGrid');
+  if(list.length === 0){
+    grid.innerHTML = '<div class="empty-state" style="grid-column:1/-1;"><div class="display">Sin resultados</div><p>Prueba con otra palabra o categoría.</p></div>';
+    return;
+  }
+  grid.innerHTML = list.map(buildProductCardHtml).join('');
+  wireProductCards(grid);
+}
+
+/* ---------------- BARRA DE CONFIANZA ---------------- */
+function renderTrustBar(){
+  var bar = document.getElementById('trustBar');
+  var items = (DATA.settings.trustItems || []).filter(function(t){ return t.text; });
+  if(items.length === 0){ bar.style.display='none'; return; }
+  bar.style.display='block';
+  document.getElementById('trustInner').innerHTML = items.map(function(t){
+    return '<div class="trust-item"><span class="ic">' + escapeHtml(t.icon||'✅') + '</span>' + escapeHtml(t.text) + '</div>';
+  }).join('');
+}
+
+/* ---------------- CATEGORÍAS DESTACADAS ---------------- */
+var CATEGORY_ICONS = [
+  [/electr/i, '⚡'], [/plomer/i, '🚰'], [/construc/i, '🧱'], [/pintur/i, '🎨'],
+  [/manual/i, '🔨'], [/tanque/i, '🛢️'], [/segur/i, '🦺'], [/jardin|jard/i, '🌿'],
+  [/general|ferreter/i, '🧰'], [/tubo|pvc/i, '🔧']
+];
+function iconForCategory(name){
+  for(var i=0;i<CATEGORY_ICONS.length;i++){ if(CATEGORY_ICONS[i][0].test(name)) return CATEGORY_ICONS[i][1]; }
+  return '📦';
+}
+function renderCategoryTiles(){
+  var section = document.getElementById('catTilesSection');
+  var wrap = document.getElementById('catTiles');
+  if(!DATA.categories || DATA.categories.length === 0){ section.style.display='none'; return; }
+  section.style.display='block';
+  wrap.innerHTML = DATA.categories.map(function(cat){
+    var count = DATA.products.filter(function(p){ return p.category === cat; }).length;
+    return '<button class="cat-tile" data-tilecat="' + escapeAttr(cat) + '">' +
+      '<span class="cticon">' + iconForCategory(cat) + '</span>' +
+      '<div class="ctname">' + escapeHtml(cat) + '</div>' +
+      '<div class="ctcount">' + count + (count===1?' producto':' productos') + '</div>' +
+    '</button>';
+  }).join('');
+  wrap.querySelectorAll('[data-tilecat]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      STATE.currentCategory = btn.getAttribute('data-tilecat');
+      renderCategoryChips();
+      renderGrid();
+      document.querySelector('.filters-bar').scrollIntoView({behavior:'smooth', block:'start'});
+    });
+  });
+}
+
+/* ---------------- DESTACADOS ---------------- */
+function renderFeatured(){
+  var section = document.getElementById('featuredSection');
+  var grid = document.getElementById('featuredGrid');
+  var list = DATA.products.filter(function(p){ return p.featured; });
+  if(list.length === 0){ section.style.display='none'; grid.innerHTML=''; return; }
+  section.style.display='block';
+  grid.innerHTML = list.map(buildProductCardHtml).join('');
+  wireProductCards(grid);
 }
 
 /* ---------------- PRODUCT MODAL ---------------- */
@@ -812,7 +932,7 @@ function renderAdminProducts(){
     var img = (p.images && p.images[0]) ? '<img src="' + escapeAttr(p.images[0]) + '">' : '<div class="noimg" style="width:36px;height:36px;font-size:16px;border-radius:5px;display:flex;align-items:center;justify-content:center;background:#F3F0EA;">⛭</div>';
     return '<tr>' +
       '<td>' + img + '</td>' +
-      '<td>' + escapeHtml(p.name) + '</td>' +
+      '<td>' + (p.featured ? '⭐ ' : '') + escapeHtml(p.name) + '</td>' +
       '<td>' + escapeHtml(p.category||'—') + '</td>' +
       '<td class="mono">' + fmtPrice(p.price) + '</td>' +
       '<td class="row-actions"><button class="ed" data-edit="' + p.id + '">Editar</button><button class="del" data-del="' + p.id + '">Eliminar</button></td>' +
@@ -875,6 +995,7 @@ function renderProductForm(id){
       '<div><label>Categoría</label><select class="field" id="fCat"><option value="">Selecciona...</option>' + catOptions + '</select></div>' +
       '<div class="full"><label>Imágenes (máx. 3)</label><div class="img-slots" id="imgSlots"></div></div>' +
     '</div>' +
+    '<label class="promo-toggle" style="margin-top:14px;"><span class="switch' + (editing && editing.featured?' on':'') + '" id="fFeaturedToggle"></span>Mostrar en "Lo más pedido" (sección destacada al inicio)</label>' +
     '<div class="save-row">' +
       '<button class="btn-primary" id="saveProdBtn" style="width:auto;padding:11px 22px;">Guardar producto</button>' +
       '<button class="btn-secondary" id="cancelProdBtn">Cancelar</button>' +
@@ -911,6 +1032,12 @@ function renderProductForm(id){
   }
   paintSlots();
 
+  var pendingFeatured = !!(editing && editing.featured);
+  document.getElementById('fFeaturedToggle').addEventListener('click', function(){
+    pendingFeatured = !pendingFeatured;
+    this.classList.toggle('on', pendingFeatured);
+  });
+
   document.getElementById('cancelProdBtn').addEventListener('click', renderAdminProducts);
   document.getElementById('saveProdBtn').addEventListener('click', function(){
     var name = document.getElementById('fName').value.trim();
@@ -923,7 +1050,7 @@ function renderProductForm(id){
     var images = draftImages.filter(function(x){ return !!x; });
 
     var prod = editing ? editing : { id: uid('p') };
-    prod.name = name; prod.description = desc; prod.price = price; prod.category = cat; prod.images = images;
+    prod.name = name; prod.description = desc; prod.price = price; prod.category = cat; prod.images = images; prod.featured = pendingFeatured;
 
     if(!editing) DATA.products.push(prod);
     else { var idx = DATA.products.findIndex(function(p){ return p.id === prod.id; }); DATA.products[idx] = prod; }
@@ -931,6 +1058,7 @@ function renderProductForm(id){
     persistDraft();
     renderAdminProducts();
     renderGrid();
+    renderFeatured();
     showToast('Producto guardado (recuerda descargar y publicar)');
   });
 }
@@ -946,24 +1074,29 @@ function importProductsFromExcel(file){
       var workbook = XLSX.read(data, { type:'array' });
       var sheetName = workbook.SheetNames.indexOf('Productos') !== -1 ? 'Productos' : workbook.SheetNames[0];
       var sheet = workbook.Sheets[sheetName];
-      var rows = XLSX.utils.sheet_to_json(sheet, { defval:'' });
+      // Leemos por POSICIÓN de columna (A, B, C...), no por el texto del encabezado,
+      // así funciona aunque alguien cambie o borre sin querer el título de una columna.
+      var rows = XLSX.utils.sheet_to_json(sheet, { header:1, defval:'' });
+      rows.shift(); // quitamos la fila 1 (encabezados)
 
       var added = 0, skipped = 0, newCats = [];
-      rows.forEach(function(row){
-        var name = String(row.nombre || row.Nombre || '').trim();
+      rows.forEach(function(cols){
+        var name = String(cols[0] || '').trim();
         if(!name) { skipped++; return; }
-        var description = String(row.descripcion || row.Descripcion || row['descripción'] || '').trim();
-        var price = parseFloat(row.precio || row.Precio || 0);
+        var description = String(cols[1] || '').trim();
+        var price = parseFloat(cols[2]);
         if(isNaN(price)) price = 0;
-        var category = String(row.categoria || row.Categoria || row['categoría'] || '').trim();
-        var images = [row.imagen1 || row.Imagen1, row.imagen2 || row.Imagen2, row.imagen3 || row.Imagen3]
-          .map(function(v){ return String(v||'').trim(); })
-          .filter(function(v){ return v; });
-
-        if(category && DATA.categories.indexOf(category) === -1){
+        var category = String(cols[3] || '').trim();
+        var existingCat = category ? findExistingCategory(category) : null;
+        if(existingCat){
+          category = existingCat;
+        } else if(category){
           DATA.categories.push(category);
           newCats.push(category);
         }
+        var images = [cols[4], cols[5], cols[6]]
+          .map(function(v){ return String(v||'').trim(); })
+          .filter(function(v){ return v; });
 
         DATA.products.push({
           id: uid('p'),
@@ -1282,6 +1415,10 @@ function renderAdminSettings(){
     '</div>' +
     '<p class="admin-sub" style="margin-top:14px;">¿Quieres agregar o cambiar las imágenes que rotan debajo de la franja de ofertas? Eso se maneja en la pestaña <strong>🖼️ Banner principal</strong>.</p>' +
 
+    '<h3 style="font-size:16px;margin-top:22px;">Barra de confianza</h3>' +
+    '<p class="admin-sub">4 frases cortas que aparecen debajo del banner (ej: envío, WhatsApp, garantía). Deja el texto vacío para ocultar esa.</p>' +
+    '<div id="trustEditList"></div>' +
+
     '<h3 style="font-size:16px;margin-top:22px;">Banner secundario (antes del pie de página)</h3>' +
     '<p class="admin-sub">Una sola imagen, aparece al final de la tienda, cuando el cliente ya vio el catálogo. Útil para una promoción extra.</p>' +
     '<div class="img-slot" style="width:140px;" id="footerBannerSlotWrap">' +
@@ -1301,6 +1438,15 @@ function renderAdminSettings(){
   var pendingLogo = DATA.settings.logoImage || '';
   var pendingFooterBanner = DATA.settings.footerBannerImage || '';
   var pendingFooterBannerActive = !!DATA.settings.footerBannerActive;
+
+  if(!DATA.settings.trustItems) DATA.settings.trustItems = [];
+  while(DATA.settings.trustItems.length < 4) DATA.settings.trustItems.push({icon:'',text:''});
+  document.getElementById('trustEditList').innerHTML = DATA.settings.trustItems.slice(0,4).map(function(t,i){
+    return '<div style="display:flex;gap:8px;margin-bottom:8px;">' +
+      '<input class="field" style="width:60px;text-align:center;" data-trusticon="' + i + '" value="' + escapeAttr(t.icon||'') + '" placeholder="🚚">' +
+      '<input class="field" style="flex:1;" data-trusttext="' + i + '" value="' + escapeAttr(t.text||'') + '" placeholder="Texto corto, ej: Envío a todo el distrito">' +
+    '</div>';
+  }).join('');
 
   var rmLogoBtn = document.getElementById('rmLogoImg');
   if(rmLogoBtn) rmLogoBtn.addEventListener('click', function(){ pendingLogo=''; document.getElementById('sLogoUrl').value=''; renderAdminSettings(); });
@@ -1331,6 +1477,12 @@ function renderAdminSettings(){
     DATA.settings.footerBannerImage = pendingFooterBanner;
     DATA.settings.footerBannerText = document.getElementById('sFooterBannerText').value.trim();
     DATA.settings.footerBannerActive = pendingFooterBannerActive;
+    DATA.settings.trustItems = [0,1,2,3].map(function(i){
+      return {
+        icon: (document.querySelector('[data-trusticon="'+i+'"]').value || '').trim(),
+        text: (document.querySelector('[data-trusttext="'+i+'"]').value || '').trim()
+      };
+    });
     persistDraft();
     renderAll();
     showToast('Configuración guardada (recuerda descargar y publicar)');

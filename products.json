@@ -31,10 +31,7 @@
     "Electricidad",
     "Pinturas",
     "Ferretería General",
-    "ELECTRICIDAD",
-    "CONSTRUCCION",
-    "TANQUES",
-    "PLOMERIA"
+    "Tanques"
   ],
   "promos": [
     {
@@ -56,7 +53,7 @@
       "name": "TUBO SEL 3/4 DE LUZ - PAVCO",
       "description": "Tubo de 3/4\" x 3 metros, ideal para instalaciones eléctricas y conducción segura de cables.",
       "price": 1,
-      "category": "ELECTRICIDAD",
+      "category": "Electricidad",
       "images": [
         "https://media.falabella.com/sodimacPE/19879X_01/w%3D1500%2Ch%3D1500%2Cfit%3Dcover?utm_source=chatgpt.com"
       ]
@@ -66,7 +63,7 @@
       "name": "TUBO SEL 5/8 DE LUZ - PAVCO",
       "description": "Tubo de 5/8\" x 3 metros, práctico para proteger y organizar el cableado eléctrico.",
       "price": 1,
-      "category": "ELECTRICIDAD",
+      "category": "Electricidad",
       "images": [
         "https://media.falabella.com/sodimacPE/199044_01/w%3D1500%2Ch%3D1500%2Cfit%3Dcover?utm_source=chatgpt.com"
       ]
@@ -76,7 +73,7 @@
       "name": "TUBO SEL 1\" DE LUZ - PAVCO",
       "description": "Tubo de 1\" x 3 metros, recomendado para canalizaciones eléctricas con mayor espacio para cables.",
       "price": 1,
-      "category": "ELECTRICIDAD",
+      "category": "Electricidad",
       "images": [
         "https://media.falabella.com/sodimacPE/199044_01/w%3D1500%2Ch%3D1500%2Cfit%3Dcover?utm_source=chatgpt.com"
       ]
@@ -86,7 +83,7 @@
       "name": "TUBO SEL 1/2 DE LUZ - PAVCO",
       "description": "Tubo de 1/2\" x 3 metros, perfecto para instalaciones eléctricas residenciales y comerciales.",
       "price": 1,
-      "category": "ELECTRICIDAD",
+      "category": "Electricidad",
       "images": [
         "https://media.falabella.com/sodimacPE/199044_01/w%3D1500%2Ch%3D1500%2Cfit%3Dcover?utm_source=chatgpt.com"
       ]
@@ -96,7 +93,7 @@
       "name": "TUBO SAP 3/4 DE LUZ - PAVCO",
       "description": "Tubo SAP de 3/4\" x 3 metros, ideal para canalizar y proteger los conductores eléctricos.",
       "price": 1,
-      "category": "ELECTRICIDAD",
+      "category": "Electricidad",
       "images": [
         "https://malvinasferreteros.com/wp-content/uploads/2023/03/tubo-pvc-con-rosca-para-agua-de-34x5m-c10-pavco.jpg"
       ]
@@ -106,7 +103,7 @@
       "name": "TUBO SAP 5/8 DE LUZ - PAVCO",
       "description": "Tubo SAP de 5/8\" x 3 metros, diseñado para una distribución ordenada del cableado eléctrico.",
       "price": 1,
-      "category": "ELECTRICIDAD",
+      "category": "Electricidad",
       "images": [
         "https://malvinasferreteros.com/wp-content/uploads/2023/03/tubo-pvc-con-rosca-para-agua-de-34x5m-c10-pavco.jpg"
       ]
@@ -116,7 +113,7 @@
       "name": "TUBO SAP 1\" DE LUZ - PAVCO",
       "description": "Tubo SAP de 1\" x 3 metros, adecuado para proyectos que requieren mayor capacidad de canalización.",
       "price": 1,
-      "category": "ELECTRICIDAD",
+      "category": "Electricidad",
       "images": [
         "https://malvinasferreteros.com/wp-content/uploads/2023/03/tubo-pvc-con-rosca-para-agua-de-34x5m-c10-pavco.jpg"
       ]
@@ -126,7 +123,7 @@
       "name": "TUBO SAP 1/2 DE LUZ - PAVCO",
       "description": "Tubo SAP de 1/2\" x 3 metros, práctico para instalaciones eléctricas compactas y organizadas.",
       "price": 1,
-      "category": "ELECTRICIDAD",
+      "category": "Electricidad",
       "images": [
         "https://malvinasferreteros.com/wp-content/uploads/2023/03/tubo-pvc-con-rosca-para-agua-de-34x5m-c10-pavco.jpg"
       ]
@@ -136,7 +133,7 @@
       "name": "CURVA SEL 3/4 DE LUZ - PAVCO",
       "description": "Curva SEL de 3/4\", ideal para realizar cambios de dirección en instalaciones eléctricas.",
       "price": 1,
-      "category": "ELECTRICIDAD",
+      "category": "Electricidad",
       "images": [
         "https://media.falabella.com/sodimacPE/199109_01/w=1200,h=1200,fit=pad"
       ]
@@ -146,7 +143,7 @@
       "name": "CURVA SEL 5/8 DE LUZ - PAVCO",
       "description": "Curva SEL de 5/8\", práctica para conectar tuberías y facilitar el recorrido del cableado.",
       "price": 1,
-      "category": "ELECTRICIDAD",
+      "category": "Electricidad",
       "images": [
         "https://media.falabella.com/sodimacPE/199109_01/w=1200,h=1200,fit=pad"
       ]
@@ -156,7 +153,7 @@
       "name": "CURVA SEL 1\" DE LUZ - PAVCO",
       "description": "Curva SEL de 1\", diseñada para adaptar la dirección de la tubería en canalizaciones eléctricas.",
       "price": 1,
-      "category": "ELECTRICIDAD",
+      "category": "Electricidad",
       "images": [
         "https://media.falabella.com/sodimacPE/199109_01/w=1200,h=1200,fit=pad"
       ]
@@ -166,7 +163,7 @@
       "name": "CURVA SEL 1/2 DE LUZ - PAVCO",
       "description": "Curva SEL de 1/2\", útil para realizar giros de forma práctica en instalaciones eléctricas.",
       "price": 1,
-      "category": "ELECTRICIDAD",
+      "category": "Electricidad",
       "images": [
         "https://media.falabella.com/sodimacPE/199109_01/w=1200,h=1200,fit=pad"
       ]
@@ -176,7 +173,7 @@
       "name": "CAJA OCTAGONAL - PAVCO",
       "description": "Caja octagonal PAVCO para instalaciones eléctricas, ideal para conexiones y montaje de luminarias.",
       "price": 1,
-      "category": "ELECTRICIDAD",
+      "category": "Electricidad",
       "images": [
         "https://media.falabella.com/sodimacPE/360945_01/w=1200,h=1200,fit=pad"
       ]
@@ -186,7 +183,7 @@
       "name": "CAJA RECTANGULAR - PAVCO",
       "description": "Caja eléctrica PAVCO de diseño octagonal, práctica para organizar y proteger conexiones en instalaciones eléctricas.",
       "price": 1,
-      "category": "ELECTRICIDAD",
+      "category": "Electricidad",
       "images": [
         "https://tse3.mm.bing.net/th/id/OIP.bDuP-kMNWDu8OeyzxlPemgHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
       ]
@@ -196,7 +193,7 @@
       "name": "CURVA SAP 3/4 DE LUZ - PAVCO",
       "description": "Curva SAP de 3/4\", ideal para realizar giros y cambios de dirección en instalaciones eléctricas.",
       "price": 1,
-      "category": "ELECTRICIDAD",
+      "category": "Electricidad",
       "images": [
         "https://media.falabella.com/sodimacPE/199109_01/w=1200,h=1200,fit=pad"
       ]
@@ -206,7 +203,7 @@
       "name": "CURVA SAP 5/8 DE LUZ - PAVCO",
       "description": "Curva SAP de 5/8\", práctica para facilitar el recorrido de la tubería en canalizaciones eléctricas.",
       "price": 1,
-      "category": "ELECTRICIDAD",
+      "category": "Electricidad",
       "images": [
         "https://media.falabella.com/sodimacPE/199109_01/w=1200,h=1200,fit=pad"
       ]
@@ -216,7 +213,7 @@
       "name": "CURVA SAP 1\" DE LUZ - PAVCO",
       "description": "Curva SAP de 1\", diseñada para conectar tramos y adaptar la dirección de la instalación.",
       "price": 1,
-      "category": "ELECTRICIDAD",
+      "category": "Electricidad",
       "images": [
         "https://media.falabella.com/sodimacPE/199109_01/w=1200,h=1200,fit=pad"
       ]
@@ -226,7 +223,7 @@
       "name": "CURVA SAP 1/2 DE LUZ - PAVCO",
       "description": "Curva SAP de 1/2\", útil para realizar cambios de dirección de manera sencilla y ordenada.",
       "price": 1,
-      "category": "ELECTRICIDAD",
+      "category": "Electricidad",
       "images": [
         "https://media.falabella.com/sodimacPE/199109_01/w=1200,h=1200,fit=pad"
       ]
@@ -236,7 +233,7 @@
       "name": "VARILLA DE 1/2 - ACEROS AREQUIPA",
       "description": "Varilla de acero de 1/2\" x 9 metros, ideal para trabajos de construcción y refuerzo estructural.",
       "price": 1,
-      "category": "CONSTRUCCION",
+      "category": "Construcción",
       "images": [
         "https://centrohierros.com/wp-content/uploads/2020/07/Varilla-corrugada-arequipa.jpg"
       ]
@@ -246,7 +243,7 @@
       "name": "VARILLA DE 1/4 - ACEROS AREQUIPA",
       "description": "Varilla de acero de 1/4\" x 9 metros, práctica para estructuras y trabajos de concreto armado.",
       "price": 1,
-      "category": "CONSTRUCCION",
+      "category": "Construcción",
       "images": [
         "https://centrohierros.com/wp-content/uploads/2020/07/Varilla-corrugada-arequipa.jpg"
       ]
@@ -256,7 +253,7 @@
       "name": "VARILLA DE 5/8 - ACEROS AREQUIPA",
       "description": "Varilla de acero de 5/8\" x 9 metros, recomendada para proyectos que requieren mayor resistencia estructural.",
       "price": 1,
-      "category": "CONSTRUCCION",
+      "category": "Construcción",
       "images": [
         "https://centrohierros.com/wp-content/uploads/2020/07/Varilla-corrugada-arequipa.jpg"
       ]
@@ -266,7 +263,7 @@
       "name": "VARILLA DE 3/8 - ACEROS AREQUIPA",
       "description": "Varilla de acero de 3/8\" x 9 metros, adecuada para refuerzos y diferentes trabajos de construcción.",
       "price": 1,
-      "category": "CONSTRUCCION",
+      "category": "Construcción",
       "images": [
         "https://centrohierros.com/wp-content/uploads/2020/07/Varilla-corrugada-arequipa.jpg"
       ]
@@ -276,7 +273,7 @@
       "name": "VARILLA DE 12MM - ACEROS AREQUIPA",
       "description": "Varilla de acero de 12 mm x 9 metros, diseñada para brindar resistencia y soporte en obras de construcción.",
       "price": 1,
-      "category": "CONSTRUCCION",
+      "category": "Construcción",
       "images": [
         "https://centrohierros.com/wp-content/uploads/2020/07/Varilla-corrugada-arequipa.jpg"
       ]
@@ -286,7 +283,7 @@
       "name": "VARILLA DE 8MM - ACEROS AREQUIPA",
       "description": "Varilla de acero de 8 mm x 9 metros, ideal para refuerzos y aplicaciones de concreto en proyectos de obra.",
       "price": 1,
-      "category": "CONSTRUCCION",
+      "category": "Construcción",
       "images": [
         "https://centrohierros.com/wp-content/uploads/2020/07/Varilla-corrugada-arequipa.jpg"
       ]
@@ -296,7 +293,7 @@
       "name": "VARILLA DE 1/2 - IMPORTADA",
       "description": "Varilla de acero de 1/2\" x 9 metros, ideal para refuerzo y trabajos generales de construcci",
       "price": 1,
-      "category": "CONSTRUCCION",
+      "category": "Construcción",
       "images": [
         "https://chapastito.com.uy/wp-content/uploads/2023/06/IMG-20230616-WA0064-600x495.jpg"
       ]
@@ -306,7 +303,7 @@
       "name": "VARILLA DE 1/4 - IMPORTADA",
       "description": "Varilla de acero de 1/4\" x 9 metros, práctica para estructuras y refuerzos en obras.",
       "price": 1,
-      "category": "CONSTRUCCION",
+      "category": "Construcción",
       "images": [
         "https://chapastito.com.uy/wp-content/uploads/2023/06/IMG-20230616-WA0064-600x495.jpg"
       ]
@@ -316,7 +313,7 @@
       "name": "VARILLA DE 5/8 - IMPORTADA",
       "description": "Varilla de acero de 5/8\" x 9 metros, recomendada para trabajos que requieren mayor resistencia.",
       "price": 1,
-      "category": "CONSTRUCCION",
+      "category": "Construcción",
       "images": [
         "https://chapastito.com.uy/wp-content/uploads/2023/06/IMG-20230616-WA0064-600x495.jpg"
       ]
@@ -326,7 +323,7 @@
       "name": "VARILLA DE 3/8 - IMPORTADA",
       "description": "Varilla de acero de 3/8\" x 9 metros, adecuada para refuerzos y estructuras de concreto.",
       "price": 1,
-      "category": "CONSTRUCCION",
+      "category": "Construcción",
       "images": [
         "https://chapastito.com.uy/wp-content/uploads/2023/06/IMG-20230616-WA0064-600x495.jpg"
       ]
@@ -336,7 +333,7 @@
       "name": "VARILLA DE 12MM - IMPORTADA",
       "description": "Varilla de acero de 12 mm x 9 metros, ideal para diferentes aplicaciones de construcción y refuerzo.",
       "price": 1,
-      "category": "CONSTRUCCION",
+      "category": "Construcción",
       "images": [
         "https://chapastito.com.uy/wp-content/uploads/2023/06/IMG-20230616-WA0064-600x495.jpg"
       ]
@@ -346,7 +343,7 @@
       "name": "VARILLA DE 8MM - IMPORTADA",
       "description": "Varilla de acero de 8 mm x 9 metros, útil para refuerzos y trabajos de concreto en obra.",
       "price": 1,
-      "category": "CONSTRUCCION",
+      "category": "Construcción",
       "images": [
         "https://chapastito.com.uy/wp-content/uploads/2023/06/IMG-20230616-WA0064-600x495.jpg"
       ]
@@ -356,7 +353,7 @@
       "name": "ALAMBRE N16 X KG",
       "description": "Alambre de acero N°16 por kilogramo, ideal para amarres, fijaciones y trabajos generales de construcción.",
       "price": 1,
-      "category": "CONSTRUCCION",
+      "category": "Construcción",
       "images": [
         "https://d34fyu2ua7aizz.cloudfront.net/images/product/25/large/ts_image_5e7934679665b9_68336384.png"
       ]
@@ -366,7 +363,7 @@
       "name": "ALAMBRE N8 X KG",
       "description": "Alambre de acero N°8 por kilogramo, recomendado para amarres y aplicaciones que requieren mayor resistencia.",
       "price": 1,
-      "category": "CONSTRUCCION",
+      "category": "Construcción",
       "images": [
         "https://th.bing.com/th/id/R.c2a670f4cc24852accfca9cedd9389d3?rik=lSljOHQpfqARfg&pid=ImgRaw&r=0",
         "https://i0.wp.com/grupocasalima.com/wp-content/uploads/clavo-madera-casa-lima-portada-1.jpg?resize=900%2C635&ssl=1"
@@ -377,7 +374,7 @@
       "name": "CLAVO DE 2\" X KG",
       "description": "Clavo de 2 pulgadas por kilogramo, ideal para fijaciones y trabajos generales de construcción.",
       "price": 1,
-      "category": "CONSTRUCCION",
+      "category": "Construcción",
       "images": [
         "https://media.falabella.com/sodimacPE/120359_01/w=1200,h=1200,fit=pad",
         "https://i0.wp.com/grupocasalima.com/wp-content/uploads/clavo-madera-casa-lima-portada-1.jpg?resize=900%2C635&ssl=1"
@@ -388,7 +385,7 @@
       "name": "CLAVO DE 1\" X KG",
       "description": "Clavo de 1 pulgada por kilogramo, práctico para trabajos de carpintería y fijaciones ligeras.",
       "price": 1,
-      "category": "CONSTRUCCION",
+      "category": "Construcción",
       "images": [
         "https://media.falabella.com/sodimacPE/120359_01/w=1200,h=1200,fit=pad",
         "https://i0.wp.com/grupocasalima.com/wp-content/uploads/clavo-madera-casa-lima-portada-1.jpg?resize=900%2C635&ssl=1"
@@ -399,7 +396,7 @@
       "name": "CLAVO DE 3\" X KG",
       "description": "Clavo de 3 pulgadas por kilogramo, recomendado para fijaciones firmes en diferentes trabajos de obra.",
       "price": 1,
-      "category": "CONSTRUCCION",
+      "category": "Construcción",
       "images": [
         "https://media.falabella.com/sodimacPE/120359_01/w=1200,h=1200,fit=pad",
         "https://i0.wp.com/grupocasalima.com/wp-content/uploads/clavo-madera-casa-lima-portada-1.jpg?resize=900%2C635&ssl=1"
@@ -410,7 +407,7 @@
       "name": "CLAVO DE 4\" X KG",
       "description": "Clavo de 4 pulgadas por kilogramo, adecuado para trabajos que requieren mayor profundidad y sujeción.",
       "price": 1,
-      "category": "CONSTRUCCION",
+      "category": "Construcción",
       "images": [
         "https://media.falabella.com/sodimacPE/120359_01/w=1200,h=1200,fit=pad",
         "https://i0.wp.com/grupocasalima.com/wp-content/uploads/clavo-madera-casa-lima-portada-1.jpg?resize=900%2C635&ssl=1"
@@ -421,7 +418,7 @@
       "name": "PLANCHA TECNOPOR DE 1/2",
       "description": "Plancha de tecnopor de 1/2\" de espesor, 1.20 m de ancho x 2.40 m de largo, ideal para construcción y aislamiento.",
       "price": 1,
-      "category": "CONSTRUCCION",
+      "category": "Construcción",
       "images": [
         "https://etsaperu.com.pe/tienda-virtual/wp-content/uploads/2020/05/PLANCHA1-768x683.png"
       ]
@@ -431,7 +428,7 @@
       "name": "PLANCHA TECNOPOR DE 3/4",
       "description": "Plancha de tecnopor de 3/4\" de espesor, 1.20 m de ancho x 2.40 m de largo, práctica para trabajos de construcción.",
       "price": 1,
-      "category": "CONSTRUCCION",
+      "category": "Construcción",
       "images": [
         "https://etsaperu.com.pe/tienda-virtual/wp-content/uploads/2020/05/PLANCHA1-768x683.png"
       ]
@@ -441,7 +438,7 @@
       "name": "PLANCHA TECNOPOR DE 1\"",
       "description": "Plancha de tecnopor de 1\" de espesor, 1.20 m de ancho x 2.40 m de largo, recomendada para aislamiento y diferentes aplicaciones en obra.",
       "price": 1,
-      "category": "CONSTRUCCION",
+      "category": "Construcción",
       "images": [
         "https://etsaperu.com.pe/tienda-virtual/wp-content/uploads/2020/05/PLANCHA1-768x683.png"
       ]
@@ -451,7 +448,7 @@
       "name": "PLANCHA TECNOPOR DE 2\"",
       "description": "Plancha de tecnopor de 2\" de espesor, 1.20 m de ancho x 2.40 m de largo, ideal para proyectos que requieren mayor aislamiento.",
       "price": 1,
-      "category": "CONSTRUCCION",
+      "category": "Construcción",
       "images": [
         "https://etsaperu.com.pe/tienda-virtual/wp-content/uploads/2020/05/PLANCHA1-768x683.png"
       ]
@@ -461,7 +458,7 @@
       "name": "TECNOPOR TECHO 15",
       "description": "Tecnopor para techo de 15 mm de espesor, con dimensiones de 1.20 m de ancho x 2.40 m de largo, ideal para trabajos de construcción.",
       "price": 1,
-      "category": "CONSTRUCCION",
+      "category": "Construcción",
       "images": [
         "https://emcotec.pe/images/blog/ladrillos-de-tecnopor.jpg"
       ]
@@ -471,7 +468,7 @@
       "name": "TECNOPOR TECHO 12",
       "description": "Tecnopor para techo de 12 mm de espesor, con dimensiones de 1.20 m de ancho x 2.40 m de largo, práctico para diferentes aplicaciones en obra.",
       "price": 1,
-      "category": "CONSTRUCCION",
+      "category": "Construcción",
       "images": [
         "https://emcotec.pe/images/blog/ladrillos-de-tecnopor.jpg"
       ]
@@ -481,7 +478,7 @@
       "name": "BOLSA DE CEMENTO APU X 42.5",
       "description": "Cemento APU en bolsa de 42.5 kg, ideal para obras de construcción y trabajos de concreto en general.",
       "price": 1,
-      "category": "CONSTRUCCION",
+      "category": "Construcción",
       "images": [
         "https://th.bing.com/th/id/R.54e7b0374217939b5ea4274306b4f80e?rik=%2fbMHUXNg%2fQZ8ug&pid=ImgRaw&r=0",
         "https://tse3.mm.bing.net/th/id/OIP.H0LIvCA8Bje-z6Ayvm9_sQHaE8?r=0&w=1240&h=828&rs=1&pid=ImgDetMain&o=7&rm=3"
@@ -492,7 +489,7 @@
       "name": "BOLSA DE CEMENTO SOL X 42.5",
       "description": "Cemento Sol Tipo I en bolsa de 42.5 kg, recomendado para construcciones generales y estructuras de concreto.",
       "price": 1,
-      "category": "CONSTRUCCION",
+      "category": "Construcción",
       "images": [
         "https://promart.vteximg.com.br/arquivos/ids/1794569-1000-1000/22662.jpg?v=637654123753470000"
       ]
@@ -502,7 +499,7 @@
       "name": "BOLSA DE CEMENTO ANDINO HS X 42.5",
       "description": "Cemento Andino Ultra HS en bolsa de 42.5 kg, ideal para obras que requieren resistencia al salitre, humedad y sulfatos.",
       "price": 1,
-      "category": "CONSTRUCCION",
+      "category": "Construcción",
       "images": [
         "https://tse3.mm.bing.net/th/id/OIP.beOrhKfB-1Q_HdMPkbJQ9QHaGz?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
       ]
@@ -512,7 +509,7 @@
       "name": "TANQUE ARENA PLUS 1100 LT ROTOPLAST",
       "description": "Tanque Rotoplas Plus de 1,100 litros, ideal para almacenar agua de forma segura y práctica en el hogar.",
       "price": 885,
-      "category": "TANQUES",
+      "category": "Tanques",
       "images": [
         "https://promart.vteximg.com.br/arquivos/ids/7089905-1000-1000/23042_1.jpg?v=638210490434000000"
       ]
@@ -522,7 +519,7 @@
       "name": "TANQUE NEGRO PLUS 1100LT ROTOPLAST",
       "description": "Tanque Rotoplas Plus negro de 1,100 litros, diseñado para almacenamiento de agua y uso residencial",
       "price": 685,
-      "category": "TANQUES",
+      "category": "Tanques",
       "images": [
         "https://promart.vteximg.com.br/arquivos/ids/9375898/68599.jpg?v=638941696304130000"
       ]
@@ -532,7 +529,7 @@
       "name": "TANQUE CISTERNA 2800LT ROTOPLAST",
       "description": "Cisterna Rotoplas de 2,800 litros, recomendada para almacenar una mayor cantidad de agua de manera segura.",
       "price": 2898,
-      "category": "TANQUES",
+      "category": "Tanques",
       "images": [
         "https://tse4.mm.bing.net/th/id/OIP.tJrVbJyhBK6R6WONSukApAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
       ]
@@ -542,7 +539,7 @@
       "name": "TANQUE ARENA PLUS 700LT ROTOPLAST",
       "description": "Tanque Rotoplas Plus de 700 litros, práctico para almacenar agua en viviendas y diferentes instalaciones.",
       "price": 720,
-      "category": "TANQUES",
+      "category": "Tanques",
       "images": [
         "https://tse4.mm.bing.net/th/id/OIP.Y4VzePeBshGxFhsi7hriAAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
       ]
@@ -552,7 +549,7 @@
       "name": "TANQUE ARENA PLUS 2500LT ROTOPLAST",
       "description": "Tanque Rotoplas Plus de 2,500 litros, ideal para proyectos que requieren una mayor capacidad de almacenamiento.",
       "price": 1598,
-      "category": "TANQUES",
+      "category": "Tanques",
       "images": [
         "https://tse2.mm.bing.net/th/id/OIP.OarC47-TncPQu9P2DBIa5wHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
       ]
@@ -562,7 +559,7 @@
       "name": "TANQUE NEGRO PLUS 2500LT ROTOPLAST",
       "description": "Tanque Rotoplas Plus negro de 2,500 litros, pensado para un almacenamiento amplio y confiable de agua.",
       "price": 1345,
-      "category": "TANQUES",
+      "category": "Tanques",
       "images": [
         "https://tse2.mm.bing.net/th/id/OIP.NuTsBsgavPbZOfdjoiUrIgHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
       ]
@@ -572,7 +569,7 @@
       "name": "TANQUE ARENA PLUS 1500 LT ROTOPLAST",
       "description": "Tanque Rotoplas Plus de 1,500 litros, adecuado para viviendas que necesitan mayor reserva de agua.",
       "price": 1225,
-      "category": "TANQUES",
+      "category": "Tanques",
       "images": [
         "https://promart.vteximg.com.br/arquivos/ids/9375927-1000-1000/128778.jpg?v=638941699600230000"
       ]
@@ -582,7 +579,7 @@
       "name": "TANQUE CISTERNA 1200LT ROTOPLAST",
       "description": "Cisterna Rotoplas de 1,200 litros, ideal para almacenamiento de agua y abastecimiento en el hogar.",
       "price": 1325,
-      "category": "TANQUES",
+      "category": "Tanques",
       "images": [
         "https://tse4.mm.bing.net/th/id/OIP.LCLVCsi3KX4Dr4YhR90_oAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
       ]
@@ -592,7 +589,7 @@
       "name": "TANQUE AZUL RESISTEC 600LT ROTOPLAST",
       "description": "Tanque Rotoplas Resistec de 600 litros, una opción práctica para almacenar agua en espacios residenciales.",
       "price": 680,
-      "category": "TANQUES",
+      "category": "Tanques",
       "images": [
         "https://tse2.mm.bing.net/th/id/OIP.bHex5hlXLXCC0YSwaufHiwHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
       ]
@@ -602,7 +599,7 @@
       "name": "CODO SP DE AGUA 1/2 X 45 - PAVCO",
       "description": "Codo PAVCO SP de 1/2\" x 45°, ideal para realizar cambios de dirección en tuberías de agua de forma práctica y segura.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/308943_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -613,7 +610,7 @@
       "name": "CODO SP DE AGUA 1/2 X 90 - PAVCO",
       "description": "Codo PAVCO SP de 1/2\" x 90°, diseñado para facilitar giros en instalaciones de agua y lograr un recorrido ordenado.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/308986_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -624,7 +621,7 @@
       "name": "CODO SP DE AGUA 1 X 45 - PAVCO",
       "description": "Codo PAVCO SP de 1\" x 45°, recomendado para adaptar el recorrido de tuberías de agua con un cambio de dirección gradual.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/308935_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -635,7 +632,7 @@
       "name": "CODO SP DE AGUA 1 X 90 - PAVCO",
       "description": "Codo PAVCO SP de 1\" x 90°, una solución práctica para realizar giros en sistemas de conducción de agua.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/308978_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -646,7 +643,7 @@
       "name": "CODO SP DE DESAGUE 2 X 45 - PAVCO",
       "description": "Codo PAVCO SP de desagüe 2\" x 45°, ideal para orientar el recorrido de tuberías y facilitar una adecuada evacuación.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/344877_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -657,7 +654,7 @@
       "name": "CODO SP DE DESAGUE 2 X 90 - PAVCO",
       "description": "Codo PAVCO SP de desagüe 2\" x 90°, diseñado para realizar cambios de dirección en sistemas de desagüe.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/344923_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -668,7 +665,7 @@
       "name": "CODO SP DE DESAGUE 3 X 45 - PAVCO",
       "description": "Codo PAVCO SP de desagüe 3\" x 45°, práctico para modificar el recorrido de la tubería de manera eficiente.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/344885_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -679,7 +676,7 @@
       "name": "CODO SP DE DESAGUE 3 X 90 - PAVCO",
       "description": "Codo PAVCO SP de desagüe 3\" x 90°, recomendado para giros definidos en instalaciones de evacuación de agua.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/344931_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -690,7 +687,7 @@
       "name": "CODO SP DE DESAGUE 4 X 45 - PAVCO",
       "description": "Codo PAVCO SP de desagüe 4\" x 45°, ideal para realizar cambios de dirección suaves en tuberías de mayor diámetro.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/344893_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -701,7 +698,7 @@
       "name": "CODO SP DE DESAGUE 4 X 90 - PAVCO",
       "description": "Codo PAVCO SP de desagüe 4\" x 90°, facilita los cambios de dirección en sistemas de desagüe de mayor capacidad.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/34494X_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -712,7 +709,7 @@
       "name": "CODO SP DE AGUA 3/4 X 45 - PAVCO",
       "description": "Codo PAVCO SP de 3/4\" x 45°, ideal para conectar tuberías y realizar cambios de dirección en instalaciones de agua.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/308951_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -723,7 +720,7 @@
       "name": "CODO SP DE AGUA 3/4 X 90 - PAVCO",
       "description": "Codo PAVCO SP de 3/4\" x 90°, práctico para adaptar el recorrido de las tuberías en instalaciones de agua.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/308994_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -734,7 +731,7 @@
       "name": "CODO C/R DE AGUA 1/2 X 45 - PAVCO",
       "description": "Codo PAVCO con rosca de 1/2\" x 45°, ideal para conexiones de agua que requieren un cambio de dirección y unión roscada.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
       ]
@@ -744,7 +741,7 @@
       "name": "CODO C/R DE AGUA 1/2 X 90 - PAVCO",
       "description": "Codo PAVCO con rosca de 1/2\" x 90°, facilita la conexión de tuberías con un giro de 90° en instalaciones de agua.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/309419_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -755,7 +752,7 @@
       "name": "CODO C/R DE AGUA 3/4 X 45 - PAVCO",
       "description": "Codo PAVCO con rosca de 3/4\" x 45°, recomendado para realizar conexiones y cambios de dirección en tuberías de agua.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
       ]
@@ -765,7 +762,7 @@
       "name": "CODO C/R DE AGUA 3/4 X 90 - PAVCO",
       "description": "Codo PAVCO con rosca de 3/4\" x 90°, práctico para unir tuberías y realizar giros en sistemas de agua.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/309419_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -776,7 +773,7 @@
       "name": "UNION C/R DE AGUA 1/2 - PAVCO",
       "description": "Unión PAVCO con rosca de 1/2\", diseñada para conectar tuberías de agua y facilitar el montaje de la instalación.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/309737_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -787,7 +784,7 @@
       "name": "TEE C/R DE AGUA 1/2 - PAVCO",
       "description": "Tee PAVCO con rosca de 1/2\", permite realizar derivaciones y distribuir el agua hacia diferentes puntos.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://th.bing.com/th/id/R.7cd3a6c0d426ef99942cb830ae31a3ad?rik=tzRsXEhVQ4efPQ&riu=http%3a%2f%2fwww.ferropolis.pe%2fcdn%2fshop%2fproducts%2f170704-tee-pvc-p-cr-34.webp%3fv%3d1675619344&ehk=l1ZgF%2bvYlNsXIBIQkK9bGo2tVTdOI9ZYHPnCG5ODYhw%3d&risl=&pid=ImgRaw&r=0",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -798,7 +795,7 @@
       "name": "TEE C/R DE AGUA 3/4 - PAVCO",
       "description": "Tee PAVCO con rosca de 3/4\", ideal para crear derivaciones en instalaciones de conducción de agua.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://th.bing.com/th/id/R.7cd3a6c0d426ef99942cb830ae31a3ad?rik=tzRsXEhVQ4efPQ&riu=http%3a%2f%2fwww.ferropolis.pe%2fcdn%2fshop%2fproducts%2f170704-tee-pvc-p-cr-34.webp%3fv%3d1675619344&ehk=l1ZgF%2bvYlNsXIBIQkK9bGo2tVTdOI9ZYHPnCG5ODYhw%3d&risl=&pid=ImgRaw&r=0",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -809,7 +806,7 @@
       "name": "TEE C/R DE AGUA 1 - PAVCO",
       "description": "Tee PAVCO con rosca de 1\", práctica para distribuir el flujo de agua y conectar diferentes recorridos.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://th.bing.com/th/id/R.7cd3a6c0d426ef99942cb830ae31a3ad?rik=tzRsXEhVQ4efPQ&riu=http%3a%2f%2fwww.ferropolis.pe%2fcdn%2fshop%2fproducts%2f170704-tee-pvc-p-cr-34.webp%3fv%3d1675619344&ehk=l1ZgF%2bvYlNsXIBIQkK9bGo2tVTdOI9ZYHPnCG5ODYhw%3d&risl=&pid=ImgRaw&r=0",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -820,7 +817,7 @@
       "name": "TEE SP DE AGUA 1/2 - PAVCO",
       "description": "Tee PAVCO SP de 1/2\", ideal para realizar derivaciones y organizar el recorrido de las tuberías de agua.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://tse4.mm.bing.net/th/id/OIP.bjoBm5LulW1vlTrKz_uNcAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -831,7 +828,7 @@
       "name": "TEE SP DE AGUA 3/4 - PAVCO",
       "description": "Tee PAVCO SP de 3/4\", permite dividir el recorrido de la tubería para conectar diferentes puntos de la instalación.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://tse4.mm.bing.net/th/id/OIP.bjoBm5LulW1vlTrKz_uNcAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -842,7 +839,7 @@
       "name": "TEE SP DE AGUA 5/8 - PAVCO",
       "description": "Tee PAVCO SP de 5/8\", adecuada para realizar conexiones y derivaciones en sistemas de agua.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://tse4.mm.bing.net/th/id/OIP.bjoBm5LulW1vlTrKz_uNcAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -853,7 +850,7 @@
       "name": "TEE SP DE AGUA 1 - PAVCO",
       "description": "Tee PAVCO SP de 1\", recomendada para distribuir el agua mediante diferentes ramificaciones de tubería.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://tse4.mm.bing.net/th/id/OIP.bjoBm5LulW1vlTrKz_uNcAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -864,7 +861,7 @@
       "name": "UNION UNIVERSAL C/R DE 1/2 - PAVCO",
       "description": "Unión universal PAVCO con rosca de 1/2\", facilita la unión y posterior desmontaje de tuberías para instalación o mantenimiento.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/396397_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -875,7 +872,7 @@
       "name": "UNION UNIVERSAL C/R DE 3/4 - PAVCO",
       "description": "Unión universal PAVCO con rosca de 3/4\", práctica para conectar tuberías y facilitar futuras labores de mantenimiento.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/396397_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -886,7 +883,7 @@
       "name": "UNION UNIVERSAL C/R DE 1 - PAVCO",
       "description": "Unión universal PAVCO con rosca de 1\", ideal para conexiones que requieren facilidad de montaje y desmontaje.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/396397_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -897,7 +894,7 @@
       "name": "REDUCCION DE 3/4 A 1/2 - PAVCO",
       "description": "Reducción PAVCO de 3/4\" a 1/2\", permite adaptar tuberías de diferentes diámetros de manera sencilla.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://www.ferropolis.pe/cdn/shop/products/89776_2048x.jpg?v=1642018534",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -908,7 +905,7 @@
       "name": "REDUCCION DE 1 A 3/4 - PAVCO",
       "description": "Reducción PAVCO de 1\" a 3/4\", ideal para conectar tramos de tubería con diferentes medidas",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://mercury.vtexassets.com/arquivos/ids/11663092/89775.jpg?v=638100504263000000",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -919,7 +916,7 @@
       "name": "REDUCCION DE 1 A 1/2 - PAVCO",
       "description": "Reducción PAVCO de 1\" a 1/2\", práctica para disminuir el diámetro y adaptar conexiones en la instalación.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/30915X_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -930,7 +927,7 @@
       "name": "REDUCCION DE 1 1/2 A 1/2 - PAVCO",
       "description": "Reducción PAVCO de 1 1/2\" a 1/2\", diseñada para conectar tuberías de distinto diámetro en una misma instalación.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
       ]
@@ -940,7 +937,7 @@
       "name": "REDUCCION DE 1 1/4 A 1 - PAVCO",
       "description": "Reducción PAVCO de 1 1/4\" a 1\", permite realizar una transición práctica entre diferentes medidas de tubería.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
       ]
@@ -950,7 +947,7 @@
       "name": "REDUCCION DE 1 1/2 A 3/4 - PAVCO",
       "description": "Reducción PAVCO de 1 1/2\" a 3/4\", ideal para adaptar el diámetro de las tuberías según las necesidades del sistema.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
       ]
@@ -960,7 +957,7 @@
       "name": "REDUCCION DE 1 1/2 A 1 1/4 - PAVCO",
       "description": "Reducción PAVCO de 1 1/2\" a 1 1/4\", recomendada para conectar tuberías de diferentes diámetros de forma práctica.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
       ]
@@ -970,7 +967,7 @@
       "name": "TAPOM HEMBRA RI 1/2 - PAVCO",
       "description": "Tapón hembra PAVCO con rosca interna de 1/2\", ideal para cerrar conexiones y evitar el paso de agua por puntos no utilizados.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://promart.vteximg.com.br/arquivos/ids/10377280-1000-1000/89788_1.jpg?v=639090334176170000",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -981,7 +978,7 @@
       "name": "TAPOM HEMBRA RI 3/4 - PAVCO",
       "description": "Tapón hembra PAVCO con rosca interna de 3/4\", práctico para sellar salidas y conexiones en instalaciones de agua.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://http2.mlstatic.com/D_NQ_NP_790160-MPE92719115335_092025-O.webp",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -992,7 +989,7 @@
       "name": "TAPOM HEMBRA RI 1 - PAVCO",
       "description": "Tapón hembra PAVCO con rosca interna de 1\", diseñado para cerrar de manera segura puntos de conexión de la instalación.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://plazavea.vteximg.com.br/arquivos/ids/34102913-1000-1000/89787.jpg?v=639090650965570000",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -1003,7 +1000,7 @@
       "name": "TAPON MACHO SP 1 - PAVCO",
       "description": "Tapón macho PAVCO SP de 1\", ideal para cerrar extremos y conexiones de tuberías de manera práctica.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
       ]
@@ -1013,7 +1010,7 @@
       "name": "TAPON MACHO SP 1/2 - PAVCO",
       "description": "Tapón macho PAVCO SP de 1/2\", adecuado para bloquear conexiones y cerrar puntos de tubería.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
       ]
@@ -1023,7 +1020,7 @@
       "name": "TAPON MACHO SP 3/4 - PAVCO",
       "description": "Tapón macho PAVCO SP de 3/4\", práctico para cerrar salidas y extremos de tuberías de agua.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
       ]
@@ -1033,7 +1030,7 @@
       "name": "TAPON HEMBRA SP 1/2 - PAVCO",
       "description": "Tapón hembra PAVCO SP de 1/2\", diseñado para cerrar conexiones y mantener protegidos los puntos de la instalación.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/309206_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -1044,7 +1041,7 @@
       "name": "TAPON HEMBRA SP 3/4 - PAVCO",
       "description": "Tapón hembra PAVCO SP de 3/4\", ideal para sellar conexiones y cerrar puntos de tubería que no estén en uso.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/309206_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -1055,7 +1052,7 @@
       "name": "TAPON HEMBRA SP 1 - PAVCO",
       "description": "Tapón hembra PAVCO SP de 1\", recomendado para cerrar conexiones de forma práctica y ordenada.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/309206_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -1066,7 +1063,7 @@
       "name": "TUBO CPVC A/C DE 1/2 - PAVCO",
       "description": "Tubo PAVCO de CPVC para agua caliente de 1/2\", ideal para instalaciones de conducción de agua a temperaturas elevadas.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/308536_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -1077,7 +1074,7 @@
       "name": "TUBO CPVC A/C DE 3/4- PAVCO",
       "description": "Tubo PAVCO de CPVC para agua caliente de 3/4\", recomendado para sistemas de distribución de agua caliente.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/308536_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -1088,7 +1085,7 @@
       "name": "TUBO CPVC A/C DE 1 - PAVCO",
       "description": "Tubo PAVCO de CPVC para agua caliente de 1\", adecuado para instalaciones que necesitan una conducción confiable de agua caliente.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/308536_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -1099,7 +1096,7 @@
       "name": "UNION CPVC A/C DE 1/2 - PAVCO",
       "description": "Unión PAVCO de CPVC para agua caliente de 1/2\", permite conectar tramos de tubería de manera práctica y segura.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/308692_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -1110,7 +1107,7 @@
       "name": "UNION CPVC A/C DE 3/4 - PAVCO",
       "description": "Unión PAVCO de CPVC para agua caliente de 3/4\", ideal para unir tuberías en sistemas de agua caliente.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/308692_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -1121,7 +1118,7 @@
       "name": "UNION CPVC A/C DE 1 - PAVCO",
       "description": "Unión PAVCO de CPVC para agua caliente de 1\", facilita la conexión de diferentes tramos del sistema.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/308692_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -1132,7 +1129,7 @@
       "name": "UNION UNIVERSAL A/C DE 1/2 - PAVCO",
       "description": "Unión universal PAVCO para agua caliente de 1/2\", facilita el montaje, desmontaje y mantenimiento de la instalación.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/308722_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -1143,7 +1140,7 @@
       "name": "UNION UNIVERSAL A/C DE 3/4 - PAVCO",
       "description": "Unión universal PAVCO para agua caliente de 3/4\", práctica para conectar tuberías y facilitar futuras labores de mantenimiento.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/308722_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -1154,7 +1151,7 @@
       "name": "UNION UNIVERSAL A/C DE 1 - PAVCO",
       "description": "Unión universal PAVCO para agua caliente de 1\", diseñada para facilitar la conexión y desmontaje de tuberías.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/308722_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -1165,7 +1162,7 @@
       "name": "ADAPTADOR M CPVC A/C DE 1/2 - PAVCO",
       "description": "Adaptador macho PAVCO de CPVC para agua caliente de 1/2\", ideal para realizar conexiones entre tuberías y accesorios.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://orbe.com.pe/wp-content/uploads/2023/04/g4-s2-p7.png",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -1176,7 +1173,7 @@
       "name": "ADAPTADOR M CPVC A/C DE 3/4 - PAVCO",
       "description": "Adaptador macho PAVCO de CPVC para agua caliente de 3/4\", práctico para conectar el sistema con otros accesorios.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://orbe.com.pe/wp-content/uploads/2023/04/g4-s2-p7.png",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -1187,7 +1184,7 @@
       "name": "ADAPTADOR M CPVC A/C DE 1 - PAVCO",
       "description": "Adaptador macho PAVCO de CPVC para agua caliente de 1\", recomendado para realizar conexiones firmes en la instalación.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://orbe.com.pe/wp-content/uploads/2023/04/g4-s2-p7.png",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -1198,7 +1195,7 @@
       "name": "TAPON CPVC A/C DE 1/2 - PAVCO",
       "description": "Tapón PAVCO de CPVC para agua caliente de 1/2\", ideal para cerrar y proteger puntos de la instalación.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://tse3.mm.bing.net/th/id/OIP.H5L_2kdjwY8JW6ZTRYmULQHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -1209,7 +1206,7 @@
       "name": "TAPON CPVC A/C DE 3/4 - PAVCO",
       "description": "Tapón PAVCO de CPVC para agua caliente de 3/4\", práctico para sellar extremos y conexiones del sistema.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://tse3.mm.bing.net/th/id/OIP.H5L_2kdjwY8JW6ZTRYmULQHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -1220,7 +1217,7 @@
       "name": "CODO CPVC A/C DE 1/2 X 45 - PAVCO",
       "description": "Codo PAVCO de CPVC para agua caliente de 1/2\" x 45°, facilita cambios de dirección en la conducción de agua caliente.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/308587_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -1231,7 +1228,7 @@
       "name": "CODO CPVC A/C DE 3/4 X 45 - PAVCO",
       "description": "Codo PAVCO de CPVC para agua caliente de 3/4\" x 45°, ideal para orientar el recorrido de la tubería.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/308595_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -1242,7 +1239,7 @@
       "name": "CODO CPVC A/C DE 1/2 X 90 - PAVCO",
       "description": "Codo PAVCO de CPVC para agua caliente de 1/2\" x 90°, diseñado para realizar giros en sistemas de agua caliente.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/308609_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -1253,7 +1250,7 @@
       "name": "CODO CPVC A/C DE 3/4 X 90 - PAVCO",
       "description": "Codo PAVCO de CPVC para agua caliente de 3/4\" x 90°, práctico para adaptar la dirección de las tuberías.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/308617_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -1264,7 +1261,7 @@
       "name": "TEE CPVC A/C DE 1/2 - PAVCO",
       "description": "Tee PAVCO de CPVC para agua caliente de 1/2\", permite realizar derivaciones y distribuir el agua hacia diferentes puntos.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/30865X_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
@@ -1275,7 +1272,7 @@
       "name": "TEE CPVC A/C DE 3/4 - PAVCO",
       "description": "Tee PAVCO de CPVC para agua caliente de 3/4\", ideal para crear ramificaciones en sistemas de conducción de agua caliente.",
       "price": 1,
-      "category": "PLOMERIA",
+      "category": "Plomería",
       "images": [
         "https://media.falabella.com/sodimacPE/30865X_01/w=1200,h=1200,fit=pad",
         "https://media.falabella.com/sodimacPE/308986_28/w=1200,h=1200,fit=pad"
